@@ -20,9 +20,13 @@ cat PROGRESS.md 2>/dev/null || echo "__NOT_FOUND__"
 
 **如果输出包含 `__NOT_FOUND__`**：
 - 说明项目还没有初始化 Harness 流程
-- 询问用户项目名称，然后把 `.claude/skills/harness-next/templates/PROGRESS.md` 复制到项目根目录，并将 `[项目名称]` 替换为实际名称
+- 自动推断项目名称，按优先级依次尝试：
+  1. 读取 `package.json` 中的 `name` 字段：`cat package.json 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('name',''))" 2>/dev/null`
+  2. 若读不到，使用当前目录名：`basename "$PWD"`
+- 用推断出的项目名直接初始化，不询问用户确认
+- 把 `.claude/skills/harness-next/templates/PROGRESS.md` 复制到项目根目录，并将 `[项目名称]` 替换为实际名称
 - 同时创建 `docs/` 目录（如果不存在）：`mkdir -p docs`
-- 初始化完成后，提示用户从第 1 阶段（产品阶段）开始
+- 初始化完成后，告知用户所用的项目名称，并提示从第 1 阶段（产品阶段）开始
 
 **如果 PROGRESS.md 存在**：
 - 解读内容，展示状态摘要（见下方格式）
