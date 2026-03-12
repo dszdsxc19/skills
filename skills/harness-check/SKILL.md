@@ -30,18 +30,23 @@ check_file() { [ -f "$1" ] && echo "  ✅ $1" || echo "  ⬜ $1"; }
 
 echo "【第 1 阶段：产品阶段】"
 check_file "docs/PRD.md"
+check_file "docs/WIREFRAME.md"
 
-echo "【第 2 阶段：系统设计阶段】"
+echo "【第 2 阶段：验证阶段】"
+check_file "docs/ROI.md"
+
+echo "【第 3 阶段：系统设计阶段】"
 check_file "docs/SYSTEM_DESIGN.md"
 check_file "docs/TECH_SELECTION.md"
+check_file "docs/MODULE_DESIGN.md"
 check_file "docs/DATA_MODEL.md"
 
-echo "【第 3 阶段：详细设计阶段】"
+echo "【第 4 阶段：详细设计阶段】"
 check_file "docs/API_SPEC.md"
 check_file "docs/DATA_MODEL_PHYSICAL.md"
 check_file "docs/TEST_STRATEGY.md"
 
-echo "【第 4 阶段：Harness 构建】"
+echo "【第 5 阶段：Harness 构建】"
 check_file "ARCHITECTURE.md"
 check_file "AGENTS.md"
 check_file "RULES.md"
@@ -53,6 +58,9 @@ V=0
 
 [ -f "docs/SYSTEM_DESIGN.md" ] && [ ! -f "docs/PRD.md" ] && \
   echo "  🚨 SYSTEM_DESIGN 存在但 PRD 缺失（跳过了产品阶段）" && V=$((V+1))
+
+[ -f "docs/SYSTEM_DESIGN.md" ] && [ ! -f "docs/ROI.md" ] && \
+  echo "  🚨 SYSTEM_DESIGN 存在但 ROI.md 缺失（跳过了验证阶段，未做价值评估就进入系统设计）" && V=$((V+1))
 
 [ -f "docs/API_SPEC.md" ] && [ ! -f "docs/SYSTEM_DESIGN.md" ] && \
   echo "  🚨 API_SPEC 存在但 SYSTEM_DESIGN 缺失（跳过了系统设计阶段）" && V=$((V+1))
@@ -113,6 +121,7 @@ echo ""
 | 检测规则 | 严重程度 | 原因 |
 |---------|---------|------|
 | 有后置文档但缺前置文档 | 🚨 严重 | 每个阶段的产物是下一阶段的输入，没有 PRD 的系统设计是无根之木 |
+| SYSTEM_DESIGN 存在但 ROI.md 缺失 | 🚨 严重 | 验证阶段的价值评估是进入系统设计的决策门，没做 ROI 评估就投入系统设计，风险极高 |
 | ARCHITECTURE.md 存在但 API_SPEC 缺失 | 🚨 严重 | Harness 是设计的"编译结果"，没有完整的详细设计，约束文档无法写准确 |
 | 有实现代码但无 API_SPEC | 🚨 严重 | 没有接口契约就开始实现，前后端必然对不上，返工成本极高 |
 | 有 Harness 文件但缺系统设计 | 🚨 严重 | AGENTS.md 里的指引必须来自真实的架构决策，否则只是空话 |

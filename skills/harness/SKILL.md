@@ -37,10 +37,10 @@ cat PROGRESS.md 2>/dev/null || echo "__NOT_FOUND__"
 每次显示状态，使用：
 
 ```
-📍 当前阶段：[阶段名称]（第 N / 6 阶段）
+📍 当前阶段：[阶段名称]（第 N / 7 阶段）
 
 已完成 ✅
-  1. 产品阶段 → docs/PRD.md
+  1. 产品阶段 → docs/PRD.md, docs/WIREFRAME.md
   （列出所有 ✅ 阶段和它们的产物）
 
 进行中 🟡
@@ -61,20 +61,25 @@ cat PROGRESS.md 2>/dev/null || echo "__NOT_FOUND__"
 
 | # | 阶段名称 | 核心目标 | 必须产出文件 |
 |---|---------|---------|------------|
-| 1 | 产品阶段 | 搞清楚做什么、用户是谁、解决什么问题 | `docs/PRD.md` |
-| 2 | 系统设计阶段 | 工程师视角：架构怎么搭、技术怎么选 | `docs/SYSTEM_DESIGN.md`, `docs/TECH_SELECTION.md`, `docs/DATA_MODEL.md` |
-| 3 | 详细设计阶段 | 具体到接口和表结构，前后端正式契约 | `docs/API_SPEC.md`, `docs/DATA_MODEL_PHYSICAL.md`, `docs/TEST_STRATEGY.md` |
-| 4 | Harness 构建 | 把设计转化为 Agent 可执行的约束体系 | `ARCHITECTURE.md`, `AGENTS.md`, `RULES.md` |
-| 5 | 实现阶段 | Agent 主导写代码，人负责审核 | 代码文件（由 Agent 生成） |
-| 6 | 部署运维 | 让系统稳定运行、可观测 | `docs/DEPLOY_OPS.md` |
+| 1 | 产品阶段 | 搞清楚做什么、用户是谁、解决什么问题；同步完成低保真原型 | `docs/PRD.md`, `docs/WIREFRAME.md` |
+| 2 | 验证阶段 | 花一周验证核心假设再花三个月写代码；输出 ROI 决策 | `docs/ROI.md` |
+| 3 | 系统设计阶段 | 工程师视角：架构怎么搭、技术怎么选、模块怎么拆（设计师并行做 UI）| `docs/SYSTEM_DESIGN.md`, `docs/TECH_SELECTION.md`, `docs/MODULE_DESIGN.md`, `docs/DATA_MODEL.md` |
+| 4 | 详细设计阶段 | 系统设计与 UI 设计汇合：具体到接口和表结构，前后端正式契约 | `docs/API_SPEC.md`, `docs/DATA_MODEL_PHYSICAL.md`, `docs/TEST_STRATEGY.md` |
+| 5 | Harness 构建 | 把设计转化为 Agent 可执行的约束体系 | `ARCHITECTURE.md`, `AGENTS.md`, `RULES.md` |
+| 6 | 实现阶段 | Agent 主导写代码（前后端并行），人负责审核 | 代码文件（由 Agent 生成） |
+| 7 | 部署运维 | 让系统稳定运行、可观测 | `docs/DEPLOY_OPS.md` |
+
+> **并行说明**：阶段 3（系统设计）与 UI/交互设计并行推进——设计师从低保真原型出发做高保真和组件规范（`docs/DESIGN_SPEC.md`），两条线在阶段 4（详细设计/API 设计）汇合。阶段 6 实现期间前后端也可并行开发。
 
 ## 方法论关键原则（需要时向用户解释）
 
-**文档在代码之前**：`ARCHITECTURE.md` 是系统设计的"编译产物"，必须有完整的设计文档（PRD → 系统设计 → 详细设计）才能构建有意义的 Harness，然后 Agent 才能开始写代码。先写代码再补文档是错的。
+**验证先于投入**：验证阶段（阶段 2）的 ROI 评估是"进入系统设计大规模投入"的决策门。通过才值得做，不通过就调整或砍掉，不能靠感觉直接冲。
+
+**文档在代码之前**：`ARCHITECTURE.md` 是系统设计的"编译产物"，必须有完整的设计文档（PRD → 验证 → 系统设计 → 详细设计）才能构建有意义的 Harness，然后 Agent 才能开始写代码。先写代码再补文档是错的。
 
 **Harness 不是项目起点**：很多人以为先搭环境再谈需求。错的。git init 是 15 分钟的工具准备，不是一个阶段。真正的第一阶段是产品阶段（写 PRD）。
 
-**不跳步**：每个阶段的产物是下一阶段的输入。API Spec 依赖系统设计，ARCHITECTURE.md 依赖 API Spec。
+**不跳步**：每个阶段的产物是下一阶段的输入。API Spec 依赖系统设计，ARCHITECTURE.md 依赖 API Spec。验证阶段的 ROI 决策是进入系统设计的前提。
 
 ## 何时建议调用其他 skill
 

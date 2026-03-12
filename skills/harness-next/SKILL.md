@@ -70,14 +70,17 @@ echo "MISSING_COUNT=$MISSING"
 
 | 推进到 | 需要创建的文件 | 模板来源 |
 |--------|-------------|---------|
-| 阶段 1（产品阶段） | `docs/PRD.md` | `templates/PRD.md` |
-| 阶段 2（系统设计） | `docs/SYSTEM_DESIGN.md`, `docs/TECH_SELECTION.md`, `docs/DATA_MODEL.md` | `templates/SYSTEM_DESIGN.md` 等 |
-| 阶段 3（详细设计） | `docs/API_SPEC.md`, `docs/DATA_MODEL_PHYSICAL.md`, `docs/TEST_STRATEGY.md` | 对应模板 |
-| 阶段 4（Harness 构建） | `ARCHITECTURE.md`, `AGENTS.md`, `RULES.md` | 对应模板 |
-| 阶段 5（实现） | `src/` 目录（如不存在则创建） | `mkdir -p src` |
-| 阶段 6（部署运维） | `docs/DEPLOY_OPS.md` | `templates/DEPLOY_OPS.md` |
+| 阶段 1（产品阶段） | `docs/PRD.md`, `docs/WIREFRAME.md` | `templates/PRD.md`（WIREFRAME.md 用简单空模板） |
+| 阶段 2（验证阶段） | `docs/ROI.md` | `templates/ROI.md` |
+| 阶段 3（系统设计） | `docs/SYSTEM_DESIGN.md`, `docs/TECH_SELECTION.md`, `docs/MODULE_DESIGN.md`, `docs/DATA_MODEL.md` | `templates/SYSTEM_DESIGN.md` 等 |
+| 阶段 4（详细设计） | `docs/API_SPEC.md`, `docs/DATA_MODEL_PHYSICAL.md`, `docs/TEST_STRATEGY.md` | 对应模板 |
+| 阶段 5（Harness 构建） | `ARCHITECTURE.md`, `AGENTS.md`, `RULES.md` | 对应模板 |
+| 阶段 6（实现） | `src/` 目录（如不存在则创建） | `mkdir -p src` |
+| 阶段 7（部署运维） | `docs/DEPLOY_OPS.md` | `templates/DEPLOY_OPS.md` |
 
 只创建**不存在**的文件，不覆盖用户已有内容。
+
+> **模板缺失时**：如果模板文件不存在（如 `ROI.md`、`MODULE_DESIGN.md`、`WIREFRAME.md`），直接用 Write 工具创建包含标题和章节骨架的空模板，不需要跳过。
 
 执行复制：
 ```bash
