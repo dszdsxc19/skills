@@ -1,0 +1,4 @@
+interface:
+  display_name: "信息写作策略"
+  short_description: "写作前先审题、定受众、定动作，并输出 checkpoint 与骨架"
+  default_prompt: "Use $information-writing-strategy to clarify the writing goal, target reader, article type, CTA, and produce a checkpointed outline before drafting."
