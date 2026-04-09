@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Manager"
+  short_description: "统一编排技能的搜索、创建、安装、同步、更新与诊断"
+  default_prompt: "Use $skill-manager to route skill lifecycle tasks: discover new skills with find-skills, create custom skills with skill-creator, and manage install/sync/update/uninstall workflows with skillshare."
