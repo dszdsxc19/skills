@@ -85,6 +85,31 @@ Treat `skillshare` as the system of record for lifecycle operations.
 - Default to global skillshare mode unless the user explicitly asks for project mode.
 - After `skillshare` mutations such as install, update, uninstall, collect, or target changes, include the required follow-up `skillshare sync` step unless the command already covers the final sync behavior.
 
+## Completeness Rule
+
+Users often ask for only part of a workflow. Do not stop at the literal command they asked for
+if the overall task would still be incomplete.
+
+When answering a skill-management request, normally provide all four parts:
+
+1. The immediate command or action.
+2. The required prerequisites.
+3. The follow-up commands that complete the workflow.
+4. The completion check that confirms the task is actually done.
+
+Typical items to fill in proactively:
+
+- initialization status
+- global vs project mode
+- remote repository setup
+- auth, SSH, token, or proxy requirements
+- required `skillshare sync` after mutations
+- whether `skillshare push` or `skillshare pull` is still needed
+- how to verify success with `status`, `doctor`, git state, or target directory checks
+
+Only omit these additions when the user explicitly asks for a single command and does not want
+the surrounding workflow.
+
 ## Non-Interactive Rule
 
 AI callers should prefer non-interactive `skillshare` usage. When examples are needed, use
