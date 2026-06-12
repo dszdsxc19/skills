@@ -1,0 +1,7 @@
+interface:
+  display_name: "写作编辑"
+  short_description: "克制的第一读者与写作引导"
+  default_prompt: "使用 $writing-editor 帮我看看这段写得怎么样，给我少量、克制、能自己修改的建议。"
+
+policy:
+  allow_implicit_invocation: true

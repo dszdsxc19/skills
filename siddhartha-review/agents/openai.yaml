@@ -1,0 +1,4 @@
+interface:
+  display_name: "Siddhartha Review"
+  short_description: "为 Siddhartha 生成每周 review 候选"
+  default_prompt: "Use $siddhartha-review to generate this week’s low-friction review candidates for the Siddhartha vault."

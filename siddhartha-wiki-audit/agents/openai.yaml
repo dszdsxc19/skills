@@ -1,0 +1,7 @@
+interface:
+  display_name: "Siddhartha Wiki Audit"
+  short_description: "审计 Siddhartha wiki 的结构风险"
+  default_prompt: "Use $siddhartha-wiki-audit to audit Siddhartha wiki quality and structural risks."
+
+policy:
+  allow_implicit_invocation: true
