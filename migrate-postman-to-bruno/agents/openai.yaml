@@ -1,0 +1,4 @@
+interface:
+  display_name: "Postman to Bruno Migration"
+  short_description: "Migrate all Postman collections into native Bruno files"
+  default_prompt: "Use $migrate-postman-to-bruno to migrate my Postman collections into Bruno and verify every request."

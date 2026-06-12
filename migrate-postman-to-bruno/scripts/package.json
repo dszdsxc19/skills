@@ -1,0 +1,15 @@
+{
+  "name": "migrate-postman-to-bruno-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runtime dependencies for the migrate-postman-to-bruno Codex skill",
+  "main": "migrate.js",
+  "scripts": {
+    "migrate": "node migrate.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@usebruno/converters": "^0.20.0",
+    "@usebruno/filestore": "^0.9.0"
+  }
+}
