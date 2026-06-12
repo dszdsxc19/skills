@@ -4,7 +4,12 @@
 
 本仓库用于保存可复用的 AI Agent Skills，不是单一应用程序。
 
-每个一级目录对应一个独立 skill，并以 `<skill-name>/SKILL.md` 作为入口。辅助内容与 `SKILL.md` 放在同一目录中，常见结构包括：
+一级目录分为两类：
+
+1. 本仓库维护的 skill：以 `<skill-name>/SKILL.md` 作为入口。
+2. 外部安装指针：只保留 `<skill-name>/AGENTS.md`，记录来源与 `npx skills add` 命令。
+
+本仓库维护的 skill 可包含：
 
 - `scripts/`：可执行脚本
 - `references/`：按需读取的参考资料
@@ -17,7 +22,7 @@
 
 ## 新增与迁入 Skill
 
-新增或复制 skill 时：
+新增自研 skill 时：
 
 1. 使用小写、连字符命名目录，例如 `writing-editor`。
 2. 确保目录中存在非空的 `SKILL.md`。
@@ -26,7 +31,13 @@
 5. 在 `README.md` 的对应分类中补充用途说明。
 6. 不要提交缓存、构建产物、临时文件或本机环境配置。
 
-迁入外部 skill 时，优先保持原始目录结构和内容。只有明确发现路径失效、依赖缺失或规则与本仓库冲突时，才做必要调整。
+对于通过 `npx skills add` 或其他在线来源安装的第三方 skill：
+
+1. 不复制或提交第三方 `SKILL.md` 本体。
+2. 不提交第三方附带的 `scripts/`、`references/`、`assets/`、`evals/` 等内容。
+3. 创建同名目录，并只写入 `AGENTS.md`。
+4. `AGENTS.md` 必须记录来源仓库、原始 skill 路径和可执行的安装命令。
+5. 来源不明确时，先查原项目的 `skills-lock.json`，不要猜测仓库地址。
 
 ## 编辑原则
 
@@ -49,7 +60,8 @@ find . -mindepth 2 -maxdepth 2 -name SKILL.md -print
 
 还应完成以下检查：
 
-- 所有新增 skill 都包含 `SKILL.md`。
+- 所有自研 skill 都包含 `SKILL.md`。
+- 所有外部安装指针都只包含 `AGENTS.md`，且安装命令完整。
 - `SKILL.md` 中引用的 `scripts/`、`references/`、`templates/` 和 `assets/` 文件存在。
 - 修改脚本后运行对应脚本或至少执行语法检查。
 - 修改工作流后按文档示例完成一次端到端验证。
