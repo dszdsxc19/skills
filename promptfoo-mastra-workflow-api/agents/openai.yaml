@@ -1,4 +1,4 @@
 interface:
   display_name: "Promptfoo Mastra Workflow API"
-  short_description: "Create promptfoo evals that call Mastra workflow HTTP APIs."
-  default_prompt: "Create or update a promptfoo evaluation for a Mastra workflow API using the native HTTP provider."
+  short_description: "Create promptfoo evals and red-team API tests."
+  default_prompt: "Use $promptfoo-mastra-workflow-api to create or update promptfoo evals and red-team tests for a Mastra workflow API."
