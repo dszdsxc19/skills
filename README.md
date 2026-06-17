@@ -50,6 +50,7 @@
 | `harness-check` | 本仓库维护 | 用脚本检查项目是否偏离既定系统设计流程。 |
 | `harness-next` | 本仓库维护 | 验证阶段产物后推进流程，并创建下一阶段模板。 |
 | `migrate-postman-to-bruno` | 本仓库维护 | 将 Postman 桌面工作区迁移为原生 Bruno collections。 |
+| `vscode-worktree-workflow` | 本仓库维护 | 用 VS Code multi-root workspace 和 Git worktree 组织多仓库、多需求并行开发。 |
 
 ## Skill 管理
 
