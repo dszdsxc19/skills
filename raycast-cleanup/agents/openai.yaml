@@ -1,0 +1,4 @@
+interface:
+  display_name: "Raycast Cleanup"
+  short_description: "Audit and trim Raycast commands"
+  default_prompt: "Use $raycast-cleanup to audit my Raycast setup and disable low-value commands."
