@@ -1,0 +1,4 @@
+interface:
+  display_name: "内部服务调研与技术方案"
+  short_description: "调研内部服务现状、关键链路与风险，并形成证据化的最小技术方案"
+  default_prompt: "使用 $research-internal-services 调研指定内部服务，优先复用已有能力并输出可验证的最小技术方案。"
