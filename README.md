@@ -61,6 +61,27 @@
 | `skill-creator` | 本仓库维护 | 创建、改进和评测 skill。 |
 | `skill-manager` | 本仓库维护 | 为发现、创建、安装、同步和维护 skill 提供统一路由。 |
 
+## Codex 用户级同步清单
+
+以下目录是从本机 Codex 用户层同步来的外部安装指针，只保存来源与安装命令，不复制第三方 skill 本体。内置 system skill 和插件缓存不在此清单中。
+
+| 来源 | Skills |
+| --- | --- |
+| `@bytedance-dev/bytedcli 内置 skill` | `bytedcli` |
+| `anthropics/skills` | `doc-coauthoring`、`frontend-design` |
+| `JimLiu/baoyu-skills` | `baoyu-xhs-images` |
+| `mastra-ai/skills` | `mastra` |
+| `mattpocock/skills` | `ask-matt`、`batch-grill-me`、`claude-handoff`、`code-review`、`codebase-design`、`design-an-interface`、`diagnosing-bugs`、`domain-modeling`<br>`edit-article`、`git-guardrails-claude-code`、`grill-me`、`grill-with-docs`、`grilling`、`handoff`、`implement`、`improve-codebase-architecture`<br>`loop-me`、`migrate-to-shoehorn`、`obsidian-vault`、`prototype`、`qa`、`request-refactor-plan`、`research`、`resolving-merge-conflicts`<br>`scaffold-exercises`、`setup-matt-pocock-skills`、`setup-pre-commit`、`setup-ts-deep-modules`、`tdd`、`teach`、`to-questionnaire`、`to-spec`<br>`to-tickets`、`triage`、`ubiquitous-language`、`wayfinder`、`wizard`、`writing-great-skills`、`writing-shape` |
+| `nextlevelbuilder/ui-ux-pro-max-skill` | `ui-ux-pro-max` |
+| `op7418/guizang-social-card-skill` | `guizang-social-card-skill` |
+| `open.feishu.cn well-known` | `lark-approval`、`lark-apps`、`lark-attendance`、`lark-base`、`lark-calendar`、`lark-contact`、`lark-doc`、`lark-drive`<br>`lark-event`、`lark-im`、`lark-mail`、`lark-markdown`、`lark-minutes`、`lark-note`、`lark-okr`、`lark-openapi-explorer`<br>`lark-shared`、`lark-sheets`、`lark-skill-maker`、`lark-slides`、`lark-task`、`lark-vc`、`lark-vc-agent`、`lark-whiteboard`<br>`lark-wiki`、`lark-workflow-meeting-summary`、`lark-workflow-standup-report` |
+| `skills.byted.org/stone/fornax` | `fornax-cli` |
+| `vercel-labs/agent-skills` | `vercel-react-best-practices`、`web-design-guidelines` |
+| `wshobson/agents` | `openapi-spec-generation` |
+| `微信开发者工具 App 内置 skill` | `wechatide-skill` |
+
+其中 10 个 `mattpocock/skills` skill 已从上游主分支删除；对应指针固定到删除前提交，避免安装地址失效。
+
 ## 使用方式
 
 本仓库维护的 skill 可以复制、链接或通过仓库地址安装。外部 skill 应进入对应目录查看 `AGENTS.md`，再执行其中的 `npx skills add` 命令。
