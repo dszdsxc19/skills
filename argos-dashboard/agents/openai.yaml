@@ -1,0 +1,4 @@
+interface:
+  display_name: "Argos Dashboard"
+  short_description: "创建、重构、接口筛选并验证高质量 Argos 可观测性看板"
+  default_prompt: "使用 $argos-dashboard 创建或优化高质量 Argos 看板，并按需加入接口 Method 联动筛选。"
