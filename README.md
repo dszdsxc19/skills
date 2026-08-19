@@ -69,6 +69,7 @@
 | 来源 | Skills |
 | --- | --- |
 | `@bytedance-dev/bytedcli 内置 skill` | `bytedcli` |
+| `addyosmani/agent-skills` | `planning-and-task-breakdown` |
 | `anthropics/skills` | `doc-coauthoring`、`frontend-design` |
 | `JimLiu/baoyu-skills` | `baoyu-xhs-images` |
 | `mastra-ai/skills` | `mastra` |
