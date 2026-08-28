@@ -45,7 +45,6 @@
 | Skill | 类型 | 用途 |
 | --- | --- | --- |
 | `argos-dashboard` | 本仓库维护 | 创建、重构并验证高质量 Argos 看板，支持接口 Method 联动筛选与 SLI 指标整理。 |
-| `auto-agentic-postgres-change` | 本仓库维护 | 安全设计、执行和验证 auto-agentic-app 共享 PostgreSQL 的 Schema 与数据变更。 |
 | `changeset-helper` | 本仓库维护 | 管理 monorepo 的 Changesets 版本、变更记录和发布流程。 |
 | `defuddle` | 外部安装 | 使用 Defuddle CLI 从网页提取干净 Markdown，减少页面噪声。 |
 | `harness` | 本仓库维护 | 指引 AI 协作项目所处阶段、当前产物和下一步。 |
