@@ -15,6 +15,16 @@
 - `agents/`：Agent 展示或运行配置
 - `evals/`：触发和输出质量评测
 
+## 绘图与可视化
+
+| Skill | 类型 | 用途 |
+| --- | --- | --- |
+| `baoyu-diagram` | 外部安装 | 生成架构图、流程图、时序图、结构图、思维导图、时间线、状态机和数据流图等独立 SVG。 |
+| `baoyu-infographic` | 外部安装 | 使用多种布局和视觉风格生成分层图、时间线、漏斗、Venn 图和信息图。 |
+| `data-visualization` | 外部安装 | 提供数据图表选型、Python 可视化模式、设计原则与无障碍检查。 |
+| `draw-io-diagram-generator` | 外部安装 | 生成可继续编辑的原生 Draw.io 架构图、流程图、UML 和 ER 图。 |
+| `excalidraw-diagram-generator` | 外部安装 | 生成手绘风 Excalidraw 架构图、流程图、思维导图、时序图、ER 图和泳道图。 |
+
 ## Obsidian 与知识库
 
 | Skill | 类型 | 用途 |
@@ -70,8 +80,10 @@
 | --- | --- |
 | `@bytedance-dev/bytedcli 内置 skill` | `bytedcli` |
 | `addyosmani/agent-skills` | `planning-and-task-breakdown` |
+| `anthropics/knowledge-work-plugins` | `data-visualization` |
 | `anthropics/skills` | `doc-coauthoring`、`frontend-design` |
-| `JimLiu/baoyu-skills` | `baoyu-xhs-images` |
+| `github/awesome-copilot` | `draw-io-diagram-generator`、`excalidraw-diagram-generator` |
+| `JimLiu/baoyu-skills` | `baoyu-diagram`、`baoyu-infographic`、`baoyu-xhs-images` |
 | `mastra-ai/skills` | `mastra` |
 | `mattpocock/skills` | `ask-matt`、`batch-grill-me`、`claude-handoff`、`code-review`、`codebase-design`、`design-an-interface`、`diagnosing-bugs`、`domain-modeling`<br>`edit-article`、`git-guardrails-claude-code`、`grill-me`、`grill-with-docs`、`grilling`、`handoff`、`implement`、`improve-codebase-architecture`<br>`loop-me`、`migrate-to-shoehorn`、`obsidian-vault`、`prototype`、`qa`、`request-refactor-plan`、`research`、`resolving-merge-conflicts`<br>`scaffold-exercises`、`setup-matt-pocock-skills`、`setup-pre-commit`、`setup-ts-deep-modules`、`tdd`、`teach`、`to-questionnaire`、`to-spec`<br>`to-tickets`、`triage`、`ubiquitous-language`、`wayfinder`、`wizard`、`writing-great-skills`、`writing-shape` |
 | `nextlevelbuilder/ui-ux-pro-max-skill` | `ui-ux-pro-max` |
