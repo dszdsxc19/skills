@@ -1,0 +1,8 @@
+interface:
+  display_name: "分层技术架构图"
+  short_description: "按最终载体选择最佳工具，生成可编辑的横向泳道分层架构图"
+  brand_color: "#2563EB"
+  default_prompt: "使用 $layered-architecture-diagram 为目标载体选择最佳制图工具和格式，并将系统实体与关系绘制为专业的分层技术架构图。"
+
+policy:
+  allow_implicit_invocation: true

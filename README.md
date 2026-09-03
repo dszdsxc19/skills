@@ -24,6 +24,7 @@
 | `data-visualization` | 外部安装 | 提供数据图表选型、Python 可视化模式、设计原则与无障碍检查。 |
 | `draw-io-diagram-generator` | 外部安装 | 生成可继续编辑的原生 Draw.io 架构图、流程图、UML 和 ER 图。 |
 | `excalidraw-diagram-generator` | 外部安装 | 生成手绘风 Excalidraw 架构图、流程图、思维导图、时序图、ER 图和泳道图。 |
+| `layered-architecture-diagram` | 本仓库维护 | 生成横向泳道式分层技术架构图，并按飞书、Markdown、Draw.io、演示文稿等最终载体选择原生可编辑格式。 |
 
 ## Obsidian 与知识库
 

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820">
+  <rect x="0" y="0" width="1200" height="820" fill="#F7F9FC"/>
+  <text x="28" y="42" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#172B4D">系统分层技术架构图</text>
+  <text x="28" y="66" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="12" fill="#5E6C84">横向职责分层 · 正交主调用链 · 纵向横切能力</text>
+
+  <g font-family="Noto Sans SC, PingFang SC, sans-serif">
+    <rect x="24" y="90" width="92" height="112" rx="14" fill="#0F9D77"/>
+    <text x="70" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">接入层</text>
+    <text x="70" y="165" text-anchor="middle" font-size="11" fill="#DFFFF5">入口</text>
+    <rect x="132" y="90" width="874" height="112" rx="14" fill="#E9F8F3" stroke="#66C7A8" stroke-width="2"/>
+    <rect x="180" y="118" width="170" height="58" rx="10" fill="#FFFFFF" stroke="#0F9D77" stroke-width="2"/>
+    <rect x="449" y="118" width="170" height="58" rx="10" fill="#FFFFFF" stroke="#1D7AFC" stroke-width="3"/>
+    <rect x="718" y="118" width="230" height="58" rx="10" fill="#FFFFFF" stroke="#0F9D77" stroke-width="2"/>
+    <text x="265" y="152" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">客户端</text>
+    <text x="534" y="152" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">API 入口</text>
+    <text x="833" y="152" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">身份与路由</text>
+    <line x1="350" y1="147" x2="441" y2="147" stroke="#1D7AFC" stroke-width="3"/>
+    <polygon points="449,147 439,141 439,153" fill="#1D7AFC"/>
+    <line x1="619" y1="147" x2="710" y2="147" stroke="#1D7AFC" stroke-width="3"/>
+    <polygon points="718,147 708,141 708,153" fill="#1D7AFC"/>
+
+    <rect x="24" y="216" width="92" height="112" rx="14" fill="#E58A2B"/>
+    <text x="70" y="272" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">应用层</text>
+    <rect x="132" y="216" width="874" height="112" rx="14" fill="#FFF4E7" stroke="#E6A863" stroke-width="2"/>
+    <rect x="180" y="244" width="210" height="58" rx="10" fill="#FFFFFF" stroke="#E58A2B" stroke-width="2"/>
+    <rect x="450" y="244" width="210" height="58" rx="10" fill="#FFFFFF" stroke="#1D7AFC" stroke-width="3"/>
+    <rect x="720" y="244" width="228" height="58" rx="10" fill="#FFFFFF" stroke="#E58A2B" stroke-width="2"/>
+    <text x="285" y="278" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">请求上下文</text>
+    <text x="555" y="278" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">核心 Runtime</text>
+    <text x="834" y="278" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">会话与记忆</text>
+
+    <rect x="24" y="342" width="92" height="142" rx="14" fill="#26A269"/>
+    <text x="70" y="405" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">编排层</text>
+    <rect x="132" y="342" width="874" height="142" rx="14" fill="#ECF9F1" stroke="#75C99B" stroke-width="2"/>
+    <rect x="180" y="376" width="190" height="66" rx="10" fill="#FFFFFF" stroke="#26A269" stroke-width="2"/>
+    <rect x="409" y="366" width="230" height="86" rx="12" fill="#FFFFFF" stroke="#1D7AFC" stroke-width="3"/>
+    <rect x="678" y="376" width="270" height="66" rx="10" fill="#FFFFFF" stroke="#26A269" stroke-width="2"/>
+    <text x="275" y="414" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">Resolver</text>
+    <text x="524" y="405" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">控制面核心</text>
+    <text x="524" y="427" text-anchor="middle" font-size="11" fill="#5E6C84">恢复 · 使用 · 空闲</text>
+    <text x="813" y="414" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">Registry 与状态</text>
+
+    <rect x="24" y="498" width="92" height="112" rx="14" fill="#4169E1"/>
+    <text x="70" y="554" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">平台层</text>
+    <rect x="132" y="498" width="874" height="112" rx="14" fill="#EEF3FF" stroke="#7B95ED" stroke-width="2"/>
+    <rect x="180" y="526" width="210" height="58" rx="10" fill="#FFFFFF" stroke="#4169E1" stroke-width="2"/>
+    <rect x="449" y="526" width="210" height="58" rx="10" fill="#FFFFFF" stroke="#4169E1" stroke-width="2"/>
+    <rect x="718" y="526" width="230" height="58" rx="10" fill="#FFFFFF" stroke="#4169E1" stroke-width="2"/>
+    <text x="285" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">平台 OpenAPI</text>
+    <text x="554" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">应用与版本</text>
+    <text x="833" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">Endpoint</text>
+
+    <rect x="24" y="624" width="92" height="142" rx="14" fill="#7357D3"/>
+    <text x="70" y="686" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">运行与</text>
+    <text x="70" y="709" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">数据层</text>
+    <rect x="132" y="624" width="874" height="142" rx="14" fill="#F2EFFF" stroke="#9987DE" stroke-width="2"/>
+    <rect x="180" y="658" width="220" height="72" rx="12" fill="#FFFFFF" stroke="#7357D3" stroke-width="3"/>
+    <rect x="459" y="658" width="210" height="72" rx="12" fill="#FFFFFF" stroke="#9987DE" stroke-width="2"/>
+    <ellipse cx="834" cy="694" rx="114" ry="36" fill="#FFFFFF" stroke="#586A84" stroke-width="2"/>
+    <text x="290" y="699" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">运行实例</text>
+    <text x="564" y="699" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">能力接口</text>
+    <text x="834" y="699" text-anchor="middle" font-size="14" font-weight="700" fill="#172B4D">持久化存储</text>
+
+    <polyline points="534,176 534,230 555,230 555,236" fill="none" stroke="#1D7AFC" stroke-width="4"/>
+    <polygon points="555,244 548,232 562,232" fill="#1D7AFC"/>
+    <polyline points="555,302 555,352 524,352 524,358" fill="none" stroke="#1D7AFC" stroke-width="4"/>
+    <polygon points="524,366 517,354 531,354" fill="#1D7AFC"/>
+    <polyline points="524,452 524,488 285,488 285,518" fill="none" stroke="#1D7AFC" stroke-width="4"/>
+    <polygon points="285,526 278,514 292,514" fill="#1D7AFC"/>
+    <polyline points="554,584 554,614 290,614 290,650" fill="none" stroke="#1D7AFC" stroke-width="4"/>
+    <polygon points="290,658 283,646 297,646" fill="#1D7AFC"/>
+
+    <rect x="1026" y="90" width="46" height="676" rx="18" fill="#E6F4FF" stroke="#1D7AFC" stroke-width="2"/>
+    <rect x="1080" y="90" width="46" height="676" rx="18" fill="#FFF1E6" stroke="#E58A2B" stroke-width="2"/>
+    <rect x="1134" y="90" width="46" height="676" rx="18" fill="#EAF8F0" stroke="#26A269" stroke-width="2"/>
+    <text x="1049" y="390" text-anchor="middle" font-size="11" font-weight="700" fill="#0C4A9E"><tspan x="1049">身份</tspan><tspan x="1049" dy="18">安全</tspan></text>
+    <text x="1103" y="390" text-anchor="middle" font-size="11" font-weight="700" fill="#9A4C00"><tspan x="1103">生命</tspan><tspan x="1103" dy="18">周期</tspan></text>
+    <text x="1157" y="390" text-anchor="middle" font-size="11" font-weight="700" fill="#0B7048"><tspan x="1157">可观</tspan><tspan x="1157" dy="18">测性</tspan></text>
+  </g>
+</svg>
