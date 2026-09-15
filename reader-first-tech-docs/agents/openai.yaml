@@ -1,0 +1,7 @@
+interface:
+  display_name: "读者优先技术文档"
+  short_description: "面向目标读者创建、重写并验收清晰易读的专业技术文档"
+  default_prompt: "Use $reader-first-tech-docs to turn this material into a reader-first technical document."
+
+policy:
+  allow_implicit_invocation: true

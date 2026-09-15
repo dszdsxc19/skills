@@ -47,6 +47,7 @@
 | `data-storytelling` | 外部安装 | 把数据分析组织成面向决策的叙事、图表和行动建议。 |
 | `documentation-writer` | 外部安装 | 按 Diátaxis 框架设计教程、操作指南、参考和解释型文档。 |
 | `information-writing-strategy` | 本仓库维护 | 在商业写作前明确受众、目标、核心信息、文章类型和详细提纲。 |
+| `reader-first-tech-docs` | 本仓库维护 | 围绕目标读者的问题设计技术文档主阅读路径，并通过附录保留可追溯的关键事实。 |
 | `writing-beats` | 外部安装 | 从原始材料中逐个选择和写作叙事 beat，逐步形成文章。 |
 | `writing-editor` | 本仓库维护 | 作为克制的第一读者 review 草稿，优先帮助作者自己修改。 |
 | `writing-fragments` | 外部安装 | 通过追问收集异质写作片段，为后续文章积累原材料。 |
