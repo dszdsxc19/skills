@@ -25,6 +25,8 @@
 | `draw-io-diagram-generator` | 外部安装 | 生成可继续编辑的原生 Draw.io 架构图、流程图、UML 和 ER 图。 |
 | `excalidraw-diagram-generator` | 外部安装 | 生成手绘风 Excalidraw 架构图、流程图、思维导图、时序图、ER 图和泳道图。 |
 | `layered-architecture-diagram` | 本仓库维护 | 生成横向泳道式分层技术架构图，并按飞书、Markdown、Draw.io、演示文稿等最终载体选择原生可编辑格式。 |
+| `frontend-slides` | 外部安装 | 制作 HTML 演示文稿，支持从 PPT 转换及视觉风格探索。 |
+| `guizang-ppt-skill` | 外部安装 | 制作单 HTML 横向翻页演示文稿，支持杂志风、瑞士风和演讲者视图。 |
 | `slidev` | 外部安装 | 使用 Markdown 和 Vue 制作网页幻灯片，支持浏览器演示、演讲者模式与静态站点构建。 |
 
 ## Obsidian 与知识库
@@ -94,6 +96,8 @@
 | `open.feishu.cn well-known` | `lark-approval`、`lark-apps`、`lark-attendance`、`lark-base`、`lark-calendar`、`lark-contact`、`lark-doc`、`lark-drive`<br>`lark-event`、`lark-im`、`lark-mail`、`lark-markdown`、`lark-minutes`、`lark-note`、`lark-okr`、`lark-openapi-explorer`<br>`lark-shared`、`lark-sheets`、`lark-skill-maker`、`lark-slides`、`lark-task`、`lark-vc`、`lark-vc-agent`、`lark-whiteboard`<br>`lark-wiki`、`lark-workflow-meeting-summary`、`lark-workflow-standup-report` |
 | `skills.byted.org/stone/fornax` | `fornax-cli` |
 | `slidevjs/slidev` | `slidev` |
+| `zarazhangrui/frontend-slides` | `frontend-slides` |
+| `op7418/guizang-ppt-skill` | `guizang-ppt-skill` |
 | `vercel-labs/agent-skills` | `vercel-react-best-practices`、`web-design-guidelines` |
 | `wshobson/agents` | `openapi-spec-generation` |
 | `微信开发者工具 App 内置 skill` | `wechatide-skill` |
