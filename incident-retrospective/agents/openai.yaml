@@ -1,0 +1,4 @@
+interface:
+  display_name: "故障复盘与恢复验收"
+  short_description: "整理故障时间线、证据、根因与修复对比，交付简洁图文复盘"
+  default_prompt: "使用 $incident-retrospective，依据现有证据编写或更新故障复盘，明确时间线、影响范围、根因、前后对比及恢复验收。"
