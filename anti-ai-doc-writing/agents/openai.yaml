@@ -1,0 +1,7 @@
+interface:
+  display_name: "去 AI 味文档写作"
+  short_description: "写作与改稿时减少重复自证、防御性解释和密集否定，让专业文档直接、有判断、有依据"
+  default_prompt: "使用 $anti-ai-doc-writing 撰写或修改这份文档，直接表达判断和设计，保留事实与关键条件。"
+
+policy:
+  allow_implicit_invocation: true
