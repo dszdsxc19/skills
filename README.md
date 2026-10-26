@@ -60,6 +60,7 @@
 
 | Skill | 类型 | 用途 |
 | --- | --- | --- |
+| `abstraction-thinking` | 本仓库维护 | 从产品、架构和流程问题中提取不变量，建立简洁模型，推导可复用的设计结论与适用边界。 |
 | `argos-dashboard` | 本仓库维护 | 创建、重构并验证高质量 Argos 看板，支持接口 Method 联动筛选与 SLI 指标整理。 |
 | `changeset-helper` | 本仓库维护 | 管理 monorepo 的 Changesets 版本、变更记录和发布流程。 |
 | `defuddle` | 外部安装 | 使用 Defuddle CLI 从网页提取干净 Markdown，减少页面噪声。 |
