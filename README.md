@@ -29,6 +29,17 @@
 | `guizang-ppt-skill` | 外部安装 | 制作单 HTML 横向翻页演示文稿，支持杂志风、瑞士风和演讲者视图。 |
 | `slidev` | 外部安装 | 使用 Markdown 和 Vue 制作网页幻灯片，支持浏览器演示、演讲者模式与静态站点构建。 |
 
+## 媒体与素材
+
+| Skill | 类型 | 用途 |
+| --- | --- | --- |
+| `immich-media-ingest` | 本仓库维护 | 下载或导入媒体到 Immich，校验原件、复用重复素材、保存来源并回读核验入库结果。 |
+| `yt-dlp-downloader` | 外部安装 | 使用 yt-dlp 下载平台视频和音频，支持格式选择、字幕与音频提取。 |
+| `photo-search` | 外部安装 | 通过 Immich 搜索和浏览照片、视频及其元数据。 |
+| `album-manager` | 外部安装 | 在 Immich 中创建、整理和分享相册。 |
+
+Immich 相关技能需要当前用户已配置可用的服务和工具连接；服务地址、账号及凭据由用户环境提供。
+
 ## Obsidian 与知识库
 
 | Skill | 类型 | 用途 |
@@ -94,6 +105,8 @@
 | `github/awesome-copilot` | `draw-io-diagram-generator`、`excalidraw-diagram-generator` |
 | `JimLiu/baoyu-skills` | `baoyu-diagram`、`baoyu-infographic`、`baoyu-xhs-images` |
 | `mastra-ai/skills` | `mastra` |
+| `MapleShaw/yt-dlp-downloader-skill` | `yt-dlp-downloader` |
+| `drolosoft/immich-photo-manager` | `photo-search`、`album-manager` |
 | `mattpocock/skills` | `ask-matt`、`batch-grill-me`、`claude-handoff`、`code-review`、`codebase-design`、`design-an-interface`、`diagnosing-bugs`、`domain-modeling`<br>`edit-article`、`git-guardrails-claude-code`、`grill-me`、`grill-with-docs`、`grilling`、`handoff`、`implement`、`improve-codebase-architecture`<br>`loop-me`、`migrate-to-shoehorn`、`obsidian-vault`、`prototype`、`qa`、`request-refactor-plan`、`research`、`resolving-merge-conflicts`<br>`scaffold-exercises`、`setup-matt-pocock-skills`、`setup-pre-commit`、`setup-ts-deep-modules`、`tdd`、`teach`、`to-questionnaire`、`to-spec`<br>`to-tickets`、`triage`、`ubiquitous-language`、`wayfinder`、`wizard`、`writing-great-skills`、`writing-shape` |
 | `nextlevelbuilder/ui-ux-pro-max-skill` | `ui-ux-pro-max` |
 | `op7418/guizang-social-card-skill` | `guizang-social-card-skill` |
