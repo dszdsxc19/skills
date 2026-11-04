@@ -19,6 +19,7 @@
 
 | Skill | 类型 | 用途 |
 | --- | --- | --- |
+| `anatomy` | 外部安装 | 制作等距 SVG 技术插画和交互式解释图，支持网页展示与 PDF 导出。 |
 | `baoyu-diagram` | 外部安装 | 生成架构图、流程图、时序图、结构图、思维导图、时间线、状态机和数据流图等独立 SVG。 |
 | `baoyu-infographic` | 外部安装 | 使用多种布局和视觉风格生成分层图、时间线、漏斗、Venn 图和信息图。 |
 | `data-visualization` | 外部安装 | 提供数据图表选型、Python 可视化模式、设计原则与无障碍检查。 |
@@ -28,12 +29,19 @@
 | `frontend-slides` | 外部安装 | 制作 HTML 演示文稿，支持从 PPT 转换及视觉风格探索。 |
 | `guizang-ppt-skill` | 外部安装 | 制作单 HTML 横向翻页演示文稿，支持杂志风、瑞士风和演讲者视图。 |
 | `slidev` | 外部安装 | 使用 Markdown 和 Vue 制作网页幻灯片，支持浏览器演示、演讲者模式与静态站点构建。 |
+| `web-design-engineer` | 外部安装 | 设计和实现网页、仪表盘、交互原型与数据可视化，支持设计系统探索和视觉评审。 |
+| `web-video-presentation` | 外部安装 | 将文章或口播稿制作成点击驱动的 16:9 网页演示，支持录屏与可选口播音频。 |
 
 ## 媒体与素材
 
 | Skill | 类型 | 用途 |
 | --- | --- | --- |
+| `gpt-image-2` | 外部安装 | 为图像生成和编辑设计提示词，支持本地接口、宿主图像工具与提示词顾问模式。 |
+| `hypit` | 外部安装 | 编排视频制作，结合生成素材、已有素材与自编组件，提供可编辑的工程和运行流程。 |
 | `immich-media-ingest` | 本仓库维护 | 下载或导入媒体到 Immich，校验原件、复用重复素材、保存来源并回读核验入库结果。 |
+| `motion-showreel` | 外部安装 | 用代码制作图形、文字与界面动效视频，输出 MP4 和可编辑源码。 |
+| `photo-abstract-editorial` | 外部安装 | 将照片制作成原始摄影区域、抽象记忆面板与诗意英文标题组合的竖向作品。 |
+| `remotion-best-practices` | 外部安装 | 提供 Remotion 视频制作的实现规范，按需加载动画、字幕、音频与渲染参考。 |
 | `yt-dlp-downloader` | 外部安装 | 使用 yt-dlp 下载平台视频和音频，支持格式选择、字幕与音频提取。 |
 | `photo-search` | 外部安装 | 通过 Immich 搜索和浏览照片、视频及其元数据。 |
 | `album-manager` | 外部安装 | 在 Immich 中创建、整理和分享相册。 |
@@ -44,6 +52,7 @@ Immich 相关技能需要当前用户已配置可用的服务和工具连接；�
 
 | Skill | 类型 | 用途 |
 | --- | --- | --- |
+| `kb-retriever` | 外部安装 | 渐进式检索本地知识库，结合分层索引处理 Markdown、文本、PDF 与 Excel。 |
 | `obsidian-bases` | 外部安装 | 创建和维护 Obsidian Bases，包括筛选、公式、视图和汇总。 |
 | `obsidian-cli` | 外部安装 | 通过 Obsidian CLI 搜索、读取和管理笔记，也支持插件与主题调试。 |
 | `obsidian-markdown` | 外部安装 | 创建符合 Obsidian 语法的 Markdown，包括 wikilink、嵌入、callout 和 properties。 |
@@ -58,6 +67,7 @@ Immich 相关技能需要当前用户已配置可用的服务和工具连接；�
 | Skill | 类型 | 用途 |
 | --- | --- | --- |
 | `anti-ai-doc-writing` | 本仓库维护 | 写作、改稿和评审时合并重复自证与防御性解释，将密集否定改写为清晰规则，保留事实与关键条件。 |
+| `beautiful-article` | 外部安装 | 将网页、PDF、文档与笔记编辑为可离线阅读和分享的单文件 HTML 文章。 |
 | `content-strategy` | 外部安装 | 规划内容支柱、主题集群、优先级和内容路线图。 |
 | `data-storytelling` | 外部安装 | 把数据分析组织成面向决策的叙事、图表和行动建议。 |
 | `documentation-writer` | 外部安装 | 按 Diátaxis 框架设计教程、操作指南、参考和解释型文档。 |
@@ -79,9 +89,11 @@ Immich 相关技能需要当前用户已配置可用的服务和工具连接；�
 | `harness-check` | 本仓库维护 | 用脚本检查项目是否偏离既定系统设计流程。 |
 | `harness-next` | 本仓库维护 | 验证阶段产物后推进流程，并创建下一阶段模板。 |
 | `incident-retrospective` | 本仓库维护 | 编写与更新故障复盘，明确发生、引入与恢复时间、影响范围、根因证据、修复对比和验收边界，支持图文 HTML 交付。 |
+| `lark-meeting` | 外部安装 | 查询和整理飞书会议记录、纪要、逐字稿与妙记，处理进行中会议的内容和互动。 |
 | `local-project-notes` | 本仓库维护 | 将开发方案与交接文档保存在项目 `.local-notes/`，通过 Git 本地 exclude 排除提交，支持跨会话查找与续作。 |
 | `migrate-postman-to-bruno` | 本仓库维护 | 将 Postman 桌面工作区迁移为原生 Bruno collections。 |
 | `research-internal-services` | 本仓库维护 | 调研内部服务现状与关键链路，形成证据化、复用优先的最小技术方案。 |
+| `vefaas` | 外部安装 | 使用 veFaaS CLI 管理应用、函数、沙箱、部署、日志与配置。 |
 | `vscode-worktree-workflow` | 本仓库维护 | 用 VS Code multi-root workspace 和 Git worktree 组织多仓库、多需求并行开发。 |
 
 ## Skill 管理
@@ -91,10 +103,11 @@ Immich 相关技能需要当前用户已配置可用的服务和工具连接；�
 | `find-skills` | 本仓库维护 | 从公开生态中发现适合特定任务的现成 skill。 |
 | `skill-creator` | 本仓库维护 | 创建、改进和评测 skill。 |
 | `skill-manager` | 本仓库维护 | 为发现、创建、安装、同步和维护 skill 提供统一路由。 |
+| `writing-for-agents` | 外部安装 | 编写供 Agent 使用的技能和指令文档，组织上下文指针、信息层次与完成条件。 |
 
 ## Codex 用户级同步清单
 
-以下目录是从本机 Codex 用户层同步来的外部安装指针，只保存来源与安装命令，不复制第三方 skill 本体。内置 system skill 和插件缓存不在此清单中。
+以下目录是从本机用户级技能目录同步来的外部安装指针，只保存来源与安装命令，不复制第三方 skill 本体。内置 system skill 和插件缓存不在此清单中。
 
 | 来源 | Skills |
 | --- | --- |
@@ -102,21 +115,27 @@ Immich 相关技能需要当前用户已配置可用的服务和工具连接；�
 | `addyosmani/agent-skills` | `planning-and-task-breakdown` |
 | `anthropics/knowledge-work-plugins` | `data-visualization` |
 | `anthropics/skills` | `doc-coauthoring`、`frontend-design` |
+| `ConardLi/garden-skills` | `beautiful-article`、`gpt-image-2`、`kb-retriever`、`motion-showreel`、`web-design-engineer`、`web-video-presentation` |
 | `github/awesome-copilot` | `draw-io-diagram-generator`、`excalidraw-diagram-generator` |
 | `JimLiu/baoyu-skills` | `baoyu-diagram`、`baoyu-infographic`、`baoyu-xhs-images` |
 | `mastra-ai/skills` | `mastra` |
 | `MapleShaw/yt-dlp-downloader-skill` | `yt-dlp-downloader` |
 | `drolosoft/immich-photo-manager` | `photo-search`、`album-manager` |
-| `mattpocock/skills` | `ask-matt`、`batch-grill-me`、`claude-handoff`、`code-review`、`codebase-design`、`design-an-interface`、`diagnosing-bugs`、`domain-modeling`<br>`edit-article`、`git-guardrails-claude-code`、`grill-me`、`grill-with-docs`、`grilling`、`handoff`、`implement`、`improve-codebase-architecture`<br>`loop-me`、`migrate-to-shoehorn`、`obsidian-vault`、`prototype`、`qa`、`request-refactor-plan`、`research`、`resolving-merge-conflicts`<br>`scaffold-exercises`、`setup-matt-pocock-skills`、`setup-pre-commit`、`setup-ts-deep-modules`、`tdd`、`teach`、`to-questionnaire`、`to-spec`<br>`to-tickets`、`triage`、`ubiquitous-language`、`wayfinder`、`wizard`、`writing-great-skills`、`writing-shape` |
+| `hypit-ai/hypit` | `hypit` |
+| `mattpocock/skills` | `ask-matt`、`batch-grill-me`、`claude-handoff`、`code-review`、`codebase-design`、`design-an-interface`、`diagnosing-bugs`、`domain-modeling`<br>`edit-article`、`git-guardrails-claude-code`、`grill-me`、`grill-with-docs`、`grilling`、`handoff`、`implement`、`improve-codebase-architecture`<br>`loop-me`、`migrate-to-shoehorn`、`obsidian-vault`、`prototype`、`qa`、`request-refactor-plan`、`research`、`resolving-merge-conflicts`<br>`scaffold-exercises`、`setup-matt-pocock-skills`、`setup-pre-commit`、`setup-ts-deep-modules`、`tdd`、`teach`、`to-questionnaire`、`to-spec`<br>`to-tickets`、`triage`、`ubiquitous-language`、`wayfinder`、`wizard`、`writing-for-agents`、`writing-great-skills`、`writing-shape` |
 | `nextlevelbuilder/ui-ux-pro-max-skill` | `ui-ux-pro-max` |
 | `op7418/guizang-social-card-skill` | `guizang-social-card-skill` |
-| `open.feishu.cn well-known` | `lark-approval`、`lark-apps`、`lark-attendance`、`lark-base`、`lark-calendar`、`lark-contact`、`lark-doc`、`lark-drive`<br>`lark-event`、`lark-im`、`lark-mail`、`lark-markdown`、`lark-minutes`、`lark-note`、`lark-okr`、`lark-openapi-explorer`<br>`lark-shared`、`lark-sheets`、`lark-skill-maker`、`lark-slides`、`lark-task`、`lark-vc`、`lark-vc-agent`、`lark-whiteboard`<br>`lark-wiki`、`lark-workflow-meeting-summary`、`lark-workflow-standup-report` |
+| `open.feishu.cn well-known` | `lark-approval`、`lark-apps`、`lark-attendance`、`lark-base`、`lark-calendar`、`lark-contact`、`lark-doc`、`lark-drive`<br>`lark-event`、`lark-im`、`lark-mail`、`lark-markdown`、`lark-meeting`、`lark-minutes`、`lark-note`、`lark-okr`、`lark-openapi-explorer`<br>`lark-shared`、`lark-sheets`、`lark-skill-maker`、`lark-slides`、`lark-task`、`lark-vc`、`lark-vc-agent`、`lark-whiteboard`<br>`lark-wiki`、`lark-workflow-meeting-summary`、`lark-workflow-standup-report` |
+| `remotion-dev/skills` | `remotion-best-practices` |
 | `skills.byted.org/stone/fornax` | `fornax-cli` |
 | `slidevjs/slidev` | `slidev` |
 | `zarazhangrui/frontend-slides` | `frontend-slides` |
 | `op7418/guizang-ppt-skill` | `guizang-ppt-skill` |
 | `vercel-labs/agent-skills` | `vercel-react-best-practices`、`web-design-guidelines` |
+| `vefaas-cli.tos-cn-beijing.volces.com well-known` | `vefaas` |
+| `wheresryan22/anatomy` | `anatomy` |
 | `wshobson/agents` | `openapi-spec-generation` |
+| `ZzzLc0405/photo-abstract-editorial` | `photo-abstract-editorial` |
 | `微信开发者工具 App 内置 skill` | `wechatide-skill` |
 
 其中 10 个 `mattpocock/skills` skill 已从上游主分支删除；对应指针固定到删除前提交，避免安装地址失效。
