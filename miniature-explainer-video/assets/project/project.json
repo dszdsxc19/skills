@@ -1,0 +1,54 @@
+{
+  "title": "包裹分拣 · 管线示例",
+  "example": true,
+  "output_name": "sorting-demo.mp4",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "narration": {
+    "provider": "none",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+8%",
+    "lead": 0.2,
+    "tail": 0.4
+  },
+  "audio": {"music": true, "effects": true},
+  "disclosure": "微缩分拣演示",
+  "segments": [
+    {
+      "id": "explain",
+      "text": "三个包裹依次通过检测器，计数随之增加。",
+      "duration": 6,
+      "anchors": {"detector": "检测器"}
+    }
+  ],
+  "shots": [
+    {
+      "id": "intake",
+      "label": "01 / 进入",
+      "segment": "explain",
+      "in": 0,
+      "out": 3,
+      "set": "sorting",
+      "mode": "3d",
+      "headline": ["包裹进入", "分拣流水线"],
+      "beats": [
+        {"id": "package-1", "at": 1.3, "duration": 0.25, "kind": "scan", "action": "第一个包裹通过检测器"},
+        {"id": "package-2", "at": 2.8, "duration": 0.25, "kind": "scan", "action": "第二个包裹通过检测器"}
+      ]
+    },
+    {
+      "id": "scan",
+      "label": "02 / 检测",
+      "segment": "explain",
+      "in": 3,
+      "out": "end",
+      "set": "sorting",
+      "mode": "3d",
+      "headline": ["通过检测器", "计数继续增加"],
+      "beats": [
+        {"id": "package-3", "at": 1.6, "duration": 0.25, "kind": "scan", "action": "第三个包裹通过检测器"}
+      ]
+    }
+  ]
+}

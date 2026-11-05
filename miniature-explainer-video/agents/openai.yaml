@@ -1,0 +1,4 @@
+interface:
+  display_name: "微缩科普动画"
+  short_description: "制作微缩三维科普动画，包含分镜、动作同步、音乐和可编辑工程"
+  default_prompt: "使用 $miniature-explainer-video，围绕我给的主题制作一条微缩三维科普短片，重点做好镜内事件、节奏和音乐。"

@@ -1,0 +1,14 @@
+{
+  "piano": "Salamander Grand Piano V3 — Alexander Holm",
+  "license": "Creative Commons Attribution 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source": "https://archive.org/details/SalamanderGrandPianoV3",
+  "sample_delivery": "https://tonejs.github.io/audio/salamander/",
+  "changes": "Selected samples resampled, pitched, enveloped and arranged into a new score.",
+  "fonts": {
+    "family": "Noto Sans SC",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosanssc",
+    "license": "SIL Open Font License 1.1",
+    "license_file": "fonts/OFL.txt"
+  }
+}
