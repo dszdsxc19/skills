@@ -1,154 +1,732 @@
 # Skill 仓库
 
-这是一个可复用的 AI Agent Skill 仓库，用来沉淀稳定的工作流程、判断规则、脚本和参考资料。
+个人可公开复用的 AI Agent 技能与第三方安装指针。公司内部技能和用户级规则保存在公司仓库。
 
-一级目录包含两类内容：
+一级目录按维护归属保存：
 
-- **本仓库维护**：目录中包含完整 `SKILL.md` 和必要的配套文件。
-- **外部安装**：目录中只保留 `AGENTS.md`，记录来源和 `npx skills add` 命令，不复制第三方本体。
+- 自维护技能：完整保存 `SKILL.md` 及其引用的脚本、参考资料、模板和资源。
+- 第三方技能：目录只保留 `AGENTS.md`，记录来源、原始路径、核对版本与恢复命令。
 
-本仓库维护的 skill 可能包含：
+## 自维护技能
 
-- `scripts/`：可执行的检查、扫描或迁移脚本
-- `references/`：按需读取的详细参考资料
-- `templates/`：流程模板
-- `agents/`：Agent 展示或运行配置
-- `evals/`：触发和输出质量评测
-
-## 绘图与可视化
-
-| Skill | 类型 | 用途 |
-| --- | --- | --- |
-| `anatomy` | 外部安装 | 制作等距 SVG 技术插画和交互式解释图，支持网页展示与 PDF 导出。 |
-| `baoyu-diagram` | 外部安装 | 生成架构图、流程图、时序图、结构图、思维导图、时间线、状态机和数据流图等独立 SVG。 |
-| `baoyu-infographic` | 外部安装 | 使用多种布局和视觉风格生成分层图、时间线、漏斗、Venn 图和信息图。 |
-| `data-visualization` | 外部安装 | 提供数据图表选型、Python 可视化模式、设计原则与无障碍检查。 |
-| `draw-io-diagram-generator` | 外部安装 | 生成可继续编辑的原生 Draw.io 架构图、流程图、UML 和 ER 图。 |
-| `excalidraw-diagram-generator` | 外部安装 | 生成手绘风 Excalidraw 架构图、流程图、思维导图、时序图、ER 图和泳道图。 |
-| `layered-architecture-diagram` | 本仓库维护 | 生成横向泳道式分层技术架构图，并按飞书、Markdown、Draw.io、演示文稿等最终载体选择原生可编辑格式。 |
-| `frontend-slides` | 外部安装 | 制作 HTML 演示文稿，支持从 PPT 转换及视觉风格探索。 |
-| `guizang-ppt-skill` | 外部安装 | 制作单 HTML 横向翻页演示文稿，支持杂志风、瑞士风和演讲者视图。 |
-| `slidev` | 外部安装 | 使用 Markdown 和 Vue 制作网页幻灯片，支持浏览器演示、演讲者模式与静态站点构建。 |
-| `web-design-engineer` | 外部安装 | 设计和实现网页、仪表盘、交互原型与数据可视化，支持设计系统探索和视觉评审。 |
-| `web-video-presentation` | 外部安装 | 将文章或口播稿制作成点击驱动的 16:9 网页演示，支持录屏与可选口播音频。 |
-
-## 媒体与素材
-
-| Skill | 类型 | 用途 |
-| --- | --- | --- |
-| `gpt-image-2` | 外部安装 | 为图像生成和编辑设计提示词，支持本地接口、宿主图像工具与提示词顾问模式。 |
-| `hypit` | 外部安装 | 编排视频制作，结合生成素材、已有素材与自编组件，提供可编辑的工程和运行流程。 |
-| `immich-media-ingest` | 本仓库维护 | 下载或导入媒体到 Immich，校验原件、复用重复素材、保存来源并回读核验入库结果。 |
-| `miniature-explainer-video` | 本仓库维护 | 用 Blender 和 Python 制作微缩三维科普动画，包含分镜、人物与道具动作、图文、旁白、配乐和拟音，交付 MP4 与可编辑工程。 |
-| `motion-showreel` | 外部安装 | 用代码制作图形、文字与界面动效视频，输出 MP4 和可编辑源码。 |
-| `photo-abstract-editorial` | 外部安装 | 将照片制作成原始摄影区域、抽象记忆面板与诗意英文标题组合的竖向作品。 |
-| `remotion-best-practices` | 外部安装 | 提供 Remotion 视频制作的实现规范，按需加载动画、字幕、音频与渲染参考。 |
-| `yt-dlp-downloader` | 外部安装 | 使用 yt-dlp 下载平台视频和音频，支持格式选择、字幕与音频提取。 |
-| `photo-search` | 外部安装 | 通过 Immich 搜索和浏览照片、视频及其元数据。 |
-| `album-manager` | 外部安装 | 在 Immich 中创建、整理和分享相册。 |
-
-Immich 相关技能需要当前用户已配置可用的服务和工具连接；服务地址、账号及凭据由用户环境提供。
-
-## Obsidian 与知识库
-
-| Skill | 类型 | 用途 |
-| --- | --- | --- |
-| `kb-retriever` | 外部安装 | 渐进式检索本地知识库，结合分层索引处理 Markdown、文本、PDF 与 Excel。 |
-| `obsidian-bases` | 外部安装 | 创建和维护 Obsidian Bases，包括筛选、公式、视图和汇总。 |
-| `obsidian-cli` | 外部安装 | 通过 Obsidian CLI 搜索、读取和管理笔记，也支持插件与主题调试。 |
-| `obsidian-markdown` | 外部安装 | 创建符合 Obsidian 语法的 Markdown，包括 wikilink、嵌入、callout 和 properties。 |
-| `siddhartha-inbox-triage` | 本仓库维护 | 为 Siddhartha 知识库筛选和判断 Inbox 笔记去向，不默认改写原文。 |
-| `siddhartha-review` | 本仓库维护 | 为 Siddhartha 知识库生成低负担、先回忆后核对的复习候选。 |
-| `siddhartha-wiki-audit` | 本仓库维护 | 审计 Siddhartha wiki 的 metadata、类型边界、连接、索引和重复内容。 |
-
-`siddhartha-*` skills 需要在 Siddhartha vault 根目录运行，并依赖其 `AGENTS.md` 和固定目录结构。
-
-## 写作与内容
-
-| Skill | 类型 | 用途 |
-| --- | --- | --- |
-| `anti-ai-doc-writing` | 本仓库维护 | 写作、改稿和评审时合并重复自证与防御性解释，将密集否定改写为清晰规则，保留事实与关键条件。 |
-| `beautiful-article` | 外部安装 | 将网页、PDF、文档与笔记编辑为可离线阅读和分享的单文件 HTML 文章。 |
-| `content-strategy` | 外部安装 | 规划内容支柱、主题集群、优先级和内容路线图。 |
-| `data-storytelling` | 外部安装 | 把数据分析组织成面向决策的叙事、图表和行动建议。 |
-| `documentation-writer` | 外部安装 | 按 Diátaxis 框架设计教程、操作指南、参考和解释型文档。 |
-| `information-writing-strategy` | 本仓库维护 | 在商业写作前明确受众、目标、核心信息、文章类型和详细提纲。 |
-| `reader-first-tech-docs` | 本仓库维护 | 围绕目标读者的问题设计技术文档主阅读路径，并通过附录保留可追溯的关键事实。 |
-| `writing-beats` | 外部安装 | 从原始材料中逐个选择和写作叙事 beat，逐步形成文章。 |
-| `writing-editor` | 本仓库维护 | 作为克制的第一读者 review 草稿，优先帮助作者自己修改。 |
-| `writing-fragments` | 外部安装 | 通过追问收集异质写作片段，为后续文章积累原材料。 |
-
-## 工程与流程
-
-| Skill | 类型 | 用途 |
-| --- | --- | --- |
-| `abstraction-thinking` | 本仓库维护 | 从产品、架构和流程问题中提取不变量，建立简洁模型，推导可复用的设计结论与适用边界。 |
-| `argos-dashboard` | 本仓库维护 | 创建、重构并验证高质量 Argos 看板，支持接口 Method 联动筛选与 SLI 指标整理。 |
-| `changeset-helper` | 本仓库维护 | 管理 monorepo 的 Changesets 版本、变更记录和发布流程。 |
-| `defuddle` | 外部安装 | 使用 Defuddle CLI 从网页提取干净 Markdown，减少页面噪声。 |
-| `harness` | 本仓库维护 | 指引 AI 协作项目所处阶段、当前产物和下一步。 |
-| `harness-check` | 本仓库维护 | 用脚本检查项目是否偏离既定系统设计流程。 |
-| `harness-next` | 本仓库维护 | 验证阶段产物后推进流程，并创建下一阶段模板。 |
-| `incident-retrospective` | 本仓库维护 | 编写与更新故障复盘，明确发生、引入与恢复时间、影响范围、根因证据、修复对比和验收边界，支持图文 HTML 交付。 |
-| `lark-meeting` | 外部安装 | 查询和整理飞书会议记录、纪要、逐字稿与妙记，处理进行中会议的内容和互动。 |
-| `local-project-notes` | 本仓库维护 | 将开发方案与交接文档保存在项目 `.local-notes/`，通过 Git 本地 exclude 排除提交，支持跨会话查找与续作。 |
-| `migrate-postman-to-bruno` | 本仓库维护 | 将 Postman 桌面工作区迁移为原生 Bruno collections。 |
-| `research-internal-services` | 本仓库维护 | 调研内部服务现状与关键链路，形成证据化、复用优先的最小技术方案。 |
-| `vefaas` | 外部安装 | 使用 veFaaS CLI 管理应用、函数、沙箱、部署、日志与配置。 |
-| `vscode-worktree-workflow` | 本仓库维护 | 用 VS Code multi-root workspace 和 Git worktree 组织多仓库、多需求并行开发。 |
-
-## Skill 管理
-
-| Skill | 类型 | 用途 |
-| --- | --- | --- |
-| `find-skills` | 本仓库维护 | 从公开生态中发现适合特定任务的现成 skill。 |
-| `skill-creator` | 本仓库维护 | 创建、改进和评测 skill。 |
-| `skill-manager` | 本仓库维护 | 为发现、创建、安装、同步和维护 skill 提供统一路由。 |
-| `writing-for-agents` | 外部安装 | 编写供 Agent 使用的技能和指令文档，组织上下文指针、信息层次与完成条件。 |
-
-## Codex 用户级同步清单
-
-以下目录是从本机用户级技能目录同步来的外部安装指针，只保存来源与安装命令，不复制第三方 skill 本体。内置 system skill 和插件缓存不在此清单中。
-
-| 来源 | Skills |
+| Skill | 用途 |
 | --- | --- |
-| `@bytedance-dev/bytedcli 内置 skill` | `bytedcli` |
-| `addyosmani/agent-skills` | `planning-and-task-breakdown` |
-| `anthropics/knowledge-work-plugins` | `data-visualization` |
-| `anthropics/skills` | `doc-coauthoring`、`frontend-design` |
-| `ConardLi/garden-skills` | `beautiful-article`、`gpt-image-2`、`kb-retriever`、`motion-showreel`、`web-design-engineer`、`web-video-presentation` |
-| `github/awesome-copilot` | `draw-io-diagram-generator`、`excalidraw-diagram-generator` |
-| `JimLiu/baoyu-skills` | `baoyu-diagram`、`baoyu-infographic`、`baoyu-xhs-images` |
-| `mastra-ai/skills` | `mastra` |
-| `MapleShaw/yt-dlp-downloader-skill` | `yt-dlp-downloader` |
-| `drolosoft/immich-photo-manager` | `photo-search`、`album-manager` |
-| `hypit-ai/hypit` | `hypit` |
-| `mattpocock/skills` | `ask-matt`、`batch-grill-me`、`claude-handoff`、`code-review`、`codebase-design`、`design-an-interface`、`diagnosing-bugs`、`domain-modeling`<br>`edit-article`、`git-guardrails-claude-code`、`grill-me`、`grill-with-docs`、`grilling`、`handoff`、`implement`、`improve-codebase-architecture`<br>`loop-me`、`migrate-to-shoehorn`、`obsidian-vault`、`prototype`、`qa`、`request-refactor-plan`、`research`、`resolving-merge-conflicts`<br>`scaffold-exercises`、`setup-matt-pocock-skills`、`setup-pre-commit`、`setup-ts-deep-modules`、`tdd`、`teach`、`to-questionnaire`、`to-spec`<br>`to-tickets`、`triage`、`ubiquitous-language`、`wayfinder`、`wizard`、`writing-for-agents`、`writing-great-skills`、`writing-shape` |
-| `nextlevelbuilder/ui-ux-pro-max-skill` | `ui-ux-pro-max` |
-| `op7418/guizang-social-card-skill` | `guizang-social-card-skill` |
-| `open.feishu.cn well-known` | `lark-approval`、`lark-apps`、`lark-attendance`、`lark-base`、`lark-calendar`、`lark-contact`、`lark-doc`、`lark-drive`<br>`lark-event`、`lark-im`、`lark-mail`、`lark-markdown`、`lark-meeting`、`lark-minutes`、`lark-note`、`lark-okr`、`lark-openapi-explorer`<br>`lark-shared`、`lark-sheets`、`lark-skill-maker`、`lark-slides`、`lark-task`、`lark-vc`、`lark-vc-agent`、`lark-whiteboard`<br>`lark-wiki`、`lark-workflow-meeting-summary`、`lark-workflow-standup-report` |
-| `remotion-dev/skills` | `remotion-best-practices` |
-| `skills.byted.org/stone/fornax` | `fornax-cli` |
-| `slidevjs/slidev` | `slidev` |
-| `zarazhangrui/frontend-slides` | `frontend-slides` |
-| `op7418/guizang-ppt-skill` | `guizang-ppt-skill` |
-| `vercel-labs/agent-skills` | `vercel-react-best-practices`、`web-design-guidelines` |
-| `vefaas-cli.tos-cn-beijing.volces.com well-known` | `vefaas` |
-| `wheresryan22/anatomy` | `anatomy` |
-| `wshobson/agents` | `openapi-spec-generation` |
-| `ZzzLc0405/photo-abstract-editorial` | `photo-abstract-editorial` |
-| `微信开发者工具 App 内置 skill` | `wechatide-skill` |
+| [abstraction-thinking](abstraction-thinking/SKILL.md) | 从产品、架构和流程问题中提取不变量，建立简洁模型，推导可复用的设计结论与适用边界。 |
+| [anti-ai-doc-writing](anti-ai-doc-writing/SKILL.md) | 写作、改稿和评审时合并重复自证与防御性解释，将密集否定改写为清晰规则，保留事实与关键条件。 |
+| [changeset-helper](changeset-helper/SKILL.md) | 管理 monorepo 的 Changesets 版本、变更记录和发布流程。 |
+| [harness](harness/SKILL.md) | 指引 AI 协作项目所处阶段、当前产物和下一步。 |
+| [harness-check](harness-check/SKILL.md) | 用脚本检查项目是否偏离既定系统设计流程。 |
+| [harness-next](harness-next/SKILL.md) | 验证阶段产物后推进流程，并创建下一阶段模板。 |
+| [immich-media-ingest](immich-media-ingest/SKILL.md) | 下载或导入媒体到 Immich，校验原件、复用重复素材、保存来源并回读核验入库结果。 |
+| [incident-retrospective](incident-retrospective/SKILL.md) | 编写与更新故障复盘，明确发生、引入与恢复时间、影响范围、根因证据、修复对比和验收边界，支持图文 HTML 交付。 |
+| [information-writing-strategy](information-writing-strategy/SKILL.md) | 在商业写作前明确受众、目标、核心信息、文章类型和详细提纲。 |
+| [layered-architecture-diagram](layered-architecture-diagram/SKILL.md) | 生成横向泳道式分层技术架构图，并按飞书、Markdown、Draw.io、演示文稿等最终载体选择原生可编辑格式。 |
+| [local-project-notes](local-project-notes/SKILL.md) | 将开发方案与交接文档保存在项目 `.local-notes/`，通过 Git 本地 exclude 排除提交，支持跨会话查找与续作。 |
+| [migrate-postman-to-bruno](migrate-postman-to-bruno/SKILL.md) | 将 Postman 桌面工作区迁移为原生 Bruno collections。 |
+| [miniature-explainer-video](miniature-explainer-video/SKILL.md) | 用 Blender 和 Python 制作微缩三维科普动画，包含分镜、人物与道具动作、图文、旁白、配乐和拟音，交付 MP4 与可编辑工程。 |
+| [promptfoo-mastra-workflow-api](promptfoo-mastra-workflow-api/SKILL.md) | Create or update promptfoo evaluations and red-team tests that call Mastra workflow APIs over native HTTP/HTTPS. Use when Codex needs to test a Mastra workflow through `/custom/workflows/:workflowId`, add promptfoo YAML test cases, assert workflow response dat |
+| [raycast-cleanup](raycast-cleanup/SKILL.md) | Audit and trim Raycast command clutter, identify low-value enabled commands and extensions, and provide safe UI paths for disabling commands. Use when the user asks to clean up Raycast, reduce enabled commands, disable AI Chat or Calculator, sync/export Raycas |
+| [reader-first-tech-docs](reader-first-tech-docs/SKILL.md) | 围绕目标读者的问题设计技术文档主阅读路径，并通过附录保留可追溯的关键事实。 |
+| [siddhartha-inbox-triage](siddhartha-inbox-triage/SKILL.md) | 为 Siddhartha 知识库筛选和判断 Inbox 笔记去向，不默认改写原文。 |
+| [siddhartha-review](siddhartha-review/SKILL.md) | 为 Siddhartha 知识库生成低负担、先回忆后核对的复习候选。 |
+| [siddhartha-wiki-audit](siddhartha-wiki-audit/SKILL.md) | 审计 Siddhartha wiki 的 metadata、类型边界、连接、索引和重复内容。 |
+| [skill-manager](skill-manager/SKILL.md) | 为发现、创建、安装、同步和维护 skill 提供统一路由。 |
+| [vscode-worktree-workflow](vscode-worktree-workflow/SKILL.md) | 用 VS Code multi-root workspace 和 Git worktree 组织多仓库、多需求并行开发。 |
+| [writing-editor](writing-editor/SKILL.md) | 作为克制的第一读者 review 草稿，优先帮助作者自己修改。 |
 
-其中 10 个 `mattpocock/skills` skill 已从上游主分支删除；对应指针固定到删除前提交，避免安装地址失效。
+`siddhartha-*` 依赖相应 Obsidian vault 的结构；其他环境依赖以技能入口为准。
 
-## 使用方式
+## 第三方安装来源
 
-本仓库维护的 skill 可以复制、链接或通过仓库地址安装。外部 skill 应进入对应目录查看 `AGENTS.md`，再执行其中的 `npx skills add` 命令。
+每个技能进入对应 `AGENTS.md` 查看安装命令。固定提交用于恢复已核对的版本；更新时先确认来源和本机定制。历史安装记录缺失的部分条目使用经过内容核对的恢复来源，指针中注明依据。
 
-阅读顺序：
+本次索引包含 259 个第三方技能，按来源折叠展示：
 
-1. 先根据任务匹配 skill 的用途。
-2. 如果目录中有 `SKILL.md`，完整读取并按需使用配套文件。
-3. 如果目录中只有 `AGENTS.md`，按说明从原始来源安装。
+<details>
+<summary>@google/stitch（1 个）</summary>
 
-有外部依赖的 skill 会在自己的 `SKILL.md` 中说明前置条件，例如 `defuddle` 需要 Defuddle CLI，`obsidian-cli` 需要运行中的 Obsidian。
+- [stitch](stitch/AGENTS.md)
+
+</details>
+
+<details>
+<summary>@volcengine/mediakit-cli（5 个）</summary>
+
+- [byted-mediakit-audio](byted-mediakit-audio/AGENTS.md)
+- [byted-mediakit-editing](byted-mediakit-editing/AGENTS.md)
+- [byted-mediakit-image](byted-mediakit-image/AGENTS.md)
+- [byted-mediakit-shared](byted-mediakit-shared/AGENTS.md)
+- [byted-mediakit-video](byted-mediakit-video/AGENTS.md)
+
+</details>
+
+<details>
+<summary>addyosmani/agent-skills（1 个）</summary>
+
+- [planning-and-task-breakdown](planning-and-task-breakdown/AGENTS.md)
+
+</details>
+
+<details>
+<summary>affaan-m/everything-claude-code（29 个）</summary>
+
+- [agent-architecture-audit](agent-architecture-audit/AGENTS.md)
+- [agent-introspection-debugging](agent-introspection-debugging/AGENTS.md)
+- [ai-regression-testing](ai-regression-testing/AGENTS.md)
+- [api-design](api-design/AGENTS.md)
+- [backend-patterns](backend-patterns/AGENTS.md)
+- [brand-discovery](brand-discovery/AGENTS.md)
+- [brand-voice](brand-voice/AGENTS.md)
+- [connections-optimizer](connections-optimizer/AGENTS.md)
+- [content-engine](content-engine/AGENTS.md)
+- [continuous-learning-v2](continuous-learning-v2/AGENTS.md)
+- [crosspost](crosspost/AGENTS.md)
+- [customer-billing-ops](customer-billing-ops/AGENTS.md)
+- [e2e-testing](e2e-testing/AGENTS.md)
+- [google-workspace-ops](google-workspace-ops/AGENTS.md)
+- [lead-intelligence](lead-intelligence/AGENTS.md)
+- [market-research](market-research/AGENTS.md)
+- [marketing-campaign](marketing-campaign/AGENTS.md)
+- [prompt-optimizer](prompt-optimizer/AGENTS.md)
+- [remotion-video-creation](remotion-video-creation/AGENTS.md)
+- [security-review](security-review/AGENTS.md)
+- [security-scan](security-scan/AGENTS.md)
+- [seo](seo/AGENTS.md)
+- [skill-stocktake](skill-stocktake/AGENTS.md)
+- [social-graph-ranker](social-graph-ranker/AGENTS.md)
+- [social-publisher](social-publisher/AGENTS.md)
+- [taste-application](taste-application/AGENTS.md)
+- [taste-distillation](taste-distillation/AGENTS.md)
+- [tdd-workflow](tdd-workflow/AGENTS.md)
+- [video-editing](video-editing/AGENTS.md)
+
+</details>
+
+<details>
+<summary>anthropics/knowledge-work-plugins（1 个）</summary>
+
+- [data-visualization](data-visualization/AGENTS.md)
+
+</details>
+
+<details>
+<summary>anthropics/skills（3 个）</summary>
+
+- [doc-coauthoring](doc-coauthoring/AGENTS.md)
+- [frontend-design](frontend-design/AGENTS.md)
+- [skill-creator](skill-creator/AGENTS.md)
+
+</details>
+
+<details>
+<summary>browser-use/video-use（1 个）</summary>
+
+- [video-use](video-use/AGENTS.md)
+
+</details>
+
+<details>
+<summary>cloudflare/vibesdk（1 个）</summary>
+
+- [frontend-design-saas](frontend-design-saas/AGENTS.md)
+
+</details>
+
+<details>
+<summary>ConardLi/garden-skills（6 个）</summary>
+
+- [beautiful-article](beautiful-article/AGENTS.md)
+- [gpt-image-2](gpt-image-2/AGENTS.md)
+- [kb-retriever](kb-retriever/AGENTS.md)
+- [motion-showreel](motion-showreel/AGENTS.md)
+- [web-design-engineer](web-design-engineer/AGENTS.md)
+- [web-video-presentation](web-video-presentation/AGENTS.md)
+
+</details>
+
+<details>
+<summary>coreyhaines31/marketingskills（1 个）</summary>
+
+- [content-strategy](content-strategy/AGENTS.md)
+
+</details>
+
+<details>
+<summary>Dammyjay93/interface-design（1 个）</summary>
+
+- [interface-design](interface-design/AGENTS.md)
+
+</details>
+
+<details>
+<summary>drolosoft/immich-photo-manager（2 个）</summary>
+
+- [album-manager](album-manager/AGENTS.md)
+- [photo-search](photo-search/AGENTS.md)
+
+</details>
+
+<details>
+<summary>dszdsxc19/hell-mode（1 个）</summary>
+
+- [hell-challenge](hell-challenge/AGENTS.md)
+
+</details>
+
+<details>
+<summary>elementalsouls/Claude-BugHunter（83 个）</summary>
+
+- [apk-redteam-pipeline](apk-redteam-pipeline/AGENTS.md)
+- [bb-local-toolkit](bb-local-toolkit/AGENTS.md)
+- [bb-methodology](bb-methodology/AGENTS.md)
+- [bug-bounty](bug-bounty/AGENTS.md)
+- [bugcrowd-reporting](bugcrowd-reporting/AGENTS.md)
+- [cloud-iam-deep](cloud-iam-deep/AGENTS.md)
+- [enterprise-vpn-attack](enterprise-vpn-attack/AGENTS.md)
+- [evidence-hygiene](evidence-hygiene/AGENTS.md)
+- [hunt-api-misconfig](hunt-api-misconfig/AGENTS.md)
+- [hunt-aspnet](hunt-aspnet/AGENTS.md)
+- [hunt-ato](hunt-ato/AGENTS.md)
+- [hunt-auth-bypass](hunt-auth-bypass/AGENTS.md)
+- [hunt-brute-force](hunt-brute-force/AGENTS.md)
+- [hunt-business-logic](hunt-business-logic/AGENTS.md)
+- [hunt-cache-poison](hunt-cache-poison/AGENTS.md)
+- [hunt-captcha-bypass](hunt-captcha-bypass/AGENTS.md)
+- [hunt-cicd](hunt-cicd/AGENTS.md)
+- [hunt-clickjacking](hunt-clickjacking/AGENTS.md)
+- [hunt-cloud-misconfig](hunt-cloud-misconfig/AGENTS.md)
+- [hunt-cors](hunt-cors/AGENTS.md)
+- [hunt-csrf](hunt-csrf/AGENTS.md)
+- [hunt-deserialization](hunt-deserialization/AGENTS.md)
+- [hunt-dispatch](hunt-dispatch/AGENTS.md)
+- [hunt-dom](hunt-dom/AGENTS.md)
+- [hunt-exceptional-conditions](hunt-exceptional-conditions/AGENTS.md)
+- [hunt-file-upload](hunt-file-upload/AGENTS.md)
+- [hunt-fintech-graphql](hunt-fintech-graphql/AGENTS.md)
+- [hunt-forgot-password](hunt-forgot-password/AGENTS.md)
+- [hunt-graphql](hunt-graphql/AGENTS.md)
+- [hunt-grpc](hunt-grpc/AGENTS.md)
+- [hunt-host-header](hunt-host-header/AGENTS.md)
+- [hunt-html-injection](hunt-html-injection/AGENTS.md)
+- [hunt-http-smuggling](hunt-http-smuggling/AGENTS.md)
+- [hunt-idor](hunt-idor/AGENTS.md)
+- [hunt-jwt-crypto](hunt-jwt-crypto/AGENTS.md)
+- [hunt-k8s](hunt-k8s/AGENTS.md)
+- [hunt-laravel](hunt-laravel/AGENTS.md)
+- [hunt-ldap](hunt-ldap/AGENTS.md)
+- [hunt-lfi](hunt-lfi/AGENTS.md)
+- [hunt-llm-ai](hunt-llm-ai/AGENTS.md)
+- [hunt-mfa-bypass](hunt-mfa-bypass/AGENTS.md)
+- [hunt-misc](hunt-misc/AGENTS.md)
+- [hunt-nextjs](hunt-nextjs/AGENTS.md)
+- [hunt-nodejs](hunt-nodejs/AGENTS.md)
+- [hunt-nosqli](hunt-nosqli/AGENTS.md)
+- [hunt-ntlm-info](hunt-ntlm-info/AGENTS.md)
+- [hunt-oauth](hunt-oauth/AGENTS.md)
+- [hunt-open-redirect](hunt-open-redirect/AGENTS.md)
+- [hunt-race-condition](hunt-race-condition/AGENTS.md)
+- [hunt-rag-vector](hunt-rag-vector/AGENTS.md)
+- [hunt-rce](hunt-rce/AGENTS.md)
+- [hunt-saml](hunt-saml/AGENTS.md)
+- [hunt-session](hunt-session/AGENTS.md)
+- [hunt-shadow-api](hunt-shadow-api/AGENTS.md)
+- [hunt-sharepoint](hunt-sharepoint/AGENTS.md)
+- [hunt-source-leak](hunt-source-leak/AGENTS.md)
+- [hunt-spa-api](hunt-spa-api/AGENTS.md)
+- [hunt-springboot](hunt-springboot/AGENTS.md)
+- [hunt-sqli](hunt-sqli/AGENTS.md)
+- [hunt-ssrf](hunt-ssrf/AGENTS.md)
+- [hunt-ssti](hunt-ssti/AGENTS.md)
+- [hunt-subdomain](hunt-subdomain/AGENTS.md)
+- [hunt-tls-network](hunt-tls-network/AGENTS.md)
+- [hunt-websocket](hunt-websocket/AGENTS.md)
+- [hunt-xss](hunt-xss/AGENTS.md)
+- [hunt-xxe](hunt-xxe/AGENTS.md)
+- [ios-redteam-pipeline](ios-redteam-pipeline/AGENTS.md)
+- [m365-entra-attack](m365-entra-attack/AGENTS.md)
+- [meme-coin-audit](meme-coin-audit/AGENTS.md)
+- [mid-engagement-ir-detection](mid-engagement-ir-detection/AGENTS.md)
+- [offensive-osint](offensive-osint/AGENTS.md)
+- [okta-attack](okta-attack/AGENTS.md)
+- [osint-methodology](osint-methodology/AGENTS.md)
+- [recon-scope-triage](recon-scope-triage/AGENTS.md)
+- [redteam-mindset](redteam-mindset/AGENTS.md)
+- [redteam-report-template](redteam-report-template/AGENTS.md)
+- [report-writing](report-writing/AGENTS.md)
+- [security-arsenal](security-arsenal/AGENTS.md)
+- [supply-chain-attack-recon](supply-chain-attack-recon/AGENTS.md)
+- [triage-validation](triage-validation/AGENTS.md)
+- [vmware-vcenter-attack](vmware-vcenter-attack/AGENTS.md)
+- [web2-recon](web2-recon/AGENTS.md)
+- [web3-audit](web3-audit/AGENTS.md)
+
+</details>
+
+<details>
+<summary>github/awesome-copilot（3 个）</summary>
+
+- [documentation-writer](documentation-writer/AGENTS.md)
+- [draw-io-diagram-generator](draw-io-diagram-generator/AGENTS.md)
+- [excalidraw-diagram-generator](excalidraw-diagram-generator/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://aihot.news/aihot-skill/（1 个）</summary>
+
+- [aihot](aihot/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://liblibai-web-static.liblib.cloud/cli/1.0.2/libtv-cli-skill.zip（1 个）</summary>
+
+- [libtv-cli](libtv-cli/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-approval/SKILL.md（1 个）</summary>
+
+- [lark-approval](lark-approval/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-apps/SKILL.md（1 个）</summary>
+
+- [lark-apps](lark-apps/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-attendance/SKILL.md（1 个）</summary>
+
+- [lark-attendance](lark-attendance/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-base/SKILL.md（1 个）</summary>
+
+- [lark-base](lark-base/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-calendar/SKILL.md（1 个）</summary>
+
+- [lark-calendar](lark-calendar/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-contact/SKILL.md（1 个）</summary>
+
+- [lark-contact](lark-contact/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-doc/SKILL.md（1 个）</summary>
+
+- [lark-doc](lark-doc/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-drive/SKILL.md（1 个）</summary>
+
+- [lark-drive](lark-drive/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-event/SKILL.md（1 个）</summary>
+
+- [lark-event](lark-event/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-im/SKILL.md（1 个）</summary>
+
+- [lark-im](lark-im/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-mail/SKILL.md（1 个）</summary>
+
+- [lark-mail](lark-mail/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-markdown/SKILL.md（1 个）</summary>
+
+- [lark-markdown](lark-markdown/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-minutes/SKILL.md（1 个）</summary>
+
+- [lark-minutes](lark-minutes/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-note/SKILL.md（1 个）</summary>
+
+- [lark-note](lark-note/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-okr/SKILL.md（1 个）</summary>
+
+- [lark-okr](lark-okr/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-openapi-explorer/SKILL.md（1 个）</summary>
+
+- [lark-openapi-explorer](lark-openapi-explorer/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-shared/SKILL.md（1 个）</summary>
+
+- [lark-shared](lark-shared/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-sheets/SKILL.md（1 个）</summary>
+
+- [lark-sheets](lark-sheets/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-skill-maker/SKILL.md（1 个）</summary>
+
+- [lark-skill-maker](lark-skill-maker/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-slides/SKILL.md（1 个）</summary>
+
+- [lark-slides](lark-slides/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-task/SKILL.md（1 个）</summary>
+
+- [lark-task](lark-task/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-vc-agent/SKILL.md（1 个）</summary>
+
+- [lark-vc-agent](lark-vc-agent/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-vc/SKILL.md（1 个）</summary>
+
+- [lark-vc](lark-vc/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-whiteboard/SKILL.md（1 个）</summary>
+
+- [lark-whiteboard](lark-whiteboard/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-wiki/SKILL.md（1 个）</summary>
+
+- [lark-wiki](lark-wiki/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-workflow-meeting-summary/SKILL.md（1 个）</summary>
+
+- [lark-workflow-meeting-summary](lark-workflow-meeting-summary/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/.well-known/skills/lark-workflow-standup-report/SKILL.md（1 个）</summary>
+
+- [lark-workflow-standup-report](lark-workflow-standup-report/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://open.feishu.cn/lark-cli/skills/regular（1 个）</summary>
+
+- [lark-meeting](lark-meeting/AGENTS.md)
+
+</details>
+
+<details>
+<summary>https://vefaas-cli.tos-cn-beijing.volces.com/skills/（1 个）</summary>
+
+- [vefaas](vefaas/AGENTS.md)
+
+</details>
+
+<details>
+<summary>hypit-ai/hypit（1 个）</summary>
+
+- [hypit](hypit/AGENTS.md)
+
+</details>
+
+<details>
+<summary>JimLiu/baoyu-skills（3 个）</summary>
+
+- [baoyu-diagram](baoyu-diagram/AGENTS.md)
+- [baoyu-infographic](baoyu-infographic/AGENTS.md)
+- [baoyu-xhs-images](baoyu-xhs-images/AGENTS.md)
+
+</details>
+
+<details>
+<summary>kepano/obsidian-skills（4 个）</summary>
+
+- [defuddle](defuddle/AGENTS.md)
+- [obsidian-bases](obsidian-bases/AGENTS.md)
+- [obsidian-cli](obsidian-cli/AGENTS.md)
+- [obsidian-markdown](obsidian-markdown/AGENTS.md)
+
+</details>
+
+<details>
+<summary>libtv-labs/libtv-skills（1 个）</summary>
+
+- [libtv-skill](libtv-skill/AGENTS.md)
+
+</details>
+
+<details>
+<summary>MapleShaw/yt-dlp-downloader-skill（1 个）</summary>
+
+- [yt-dlp-downloader](yt-dlp-downloader/AGENTS.md)
+
+</details>
+
+<details>
+<summary>mastra-ai/skills（1 个）</summary>
+
+- [mastra](mastra/AGENTS.md)
+
+</details>
+
+<details>
+<summary>mattpocock/skills（42 个）</summary>
+
+- [ask-matt](ask-matt/AGENTS.md)
+- [batch-grill-me](batch-grill-me/AGENTS.md)
+- [claude-handoff](claude-handoff/AGENTS.md)
+- [code-review](code-review/AGENTS.md)
+- [codebase-design](codebase-design/AGENTS.md)
+- [design-an-interface](design-an-interface/AGENTS.md)
+- [diagnosing-bugs](diagnosing-bugs/AGENTS.md)
+- [domain-modeling](domain-modeling/AGENTS.md)
+- [edit-article](edit-article/AGENTS.md)
+- [git-guardrails-claude-code](git-guardrails-claude-code/AGENTS.md)
+- [grill-me](grill-me/AGENTS.md)
+- [grill-with-docs](grill-with-docs/AGENTS.md)
+- [grilling](grilling/AGENTS.md)
+- [handoff](handoff/AGENTS.md)
+- [implement](implement/AGENTS.md)
+- [improve-codebase-architecture](improve-codebase-architecture/AGENTS.md)
+- [loop-me](loop-me/AGENTS.md)
+- [migrate-to-shoehorn](migrate-to-shoehorn/AGENTS.md)
+- [obsidian-vault](obsidian-vault/AGENTS.md)
+- [prototype](prototype/AGENTS.md)
+- [qa](qa/AGENTS.md)
+- [request-refactor-plan](request-refactor-plan/AGENTS.md)
+- [research](research/AGENTS.md)
+- [resolving-merge-conflicts](resolving-merge-conflicts/AGENTS.md)
+- [scaffold-exercises](scaffold-exercises/AGENTS.md)
+- [setup-matt-pocock-skills](setup-matt-pocock-skills/AGENTS.md)
+- [setup-pre-commit](setup-pre-commit/AGENTS.md)
+- [setup-ts-deep-modules](setup-ts-deep-modules/AGENTS.md)
+- [tdd](tdd/AGENTS.md)
+- [teach](teach/AGENTS.md)
+- [to-questionnaire](to-questionnaire/AGENTS.md)
+- [to-spec](to-spec/AGENTS.md)
+- [to-tickets](to-tickets/AGENTS.md)
+- [triage](triage/AGENTS.md)
+- [ubiquitous-language](ubiquitous-language/AGENTS.md)
+- [wayfinder](wayfinder/AGENTS.md)
+- [wizard](wizard/AGENTS.md)
+- [writing-beats](writing-beats/AGENTS.md)
+- [writing-for-agents](writing-for-agents/AGENTS.md)
+- [writing-fragments](writing-fragments/AGENTS.md)
+- [writing-great-skills](writing-great-skills/AGENTS.md)
+- [writing-shape](writing-shape/AGENTS.md)
+
+</details>
+
+<details>
+<summary>nextlevelbuilder/ui-ux-pro-max-skill（1 个）</summary>
+
+- [ui-ux-pro-max](ui-ux-pro-max/AGENTS.md)
+
+</details>
+
+<details>
+<summary>op7418/guizang-ppt-skill（1 个）</summary>
+
+- [guizang-ppt-skill](guizang-ppt-skill/AGENTS.md)
+
+</details>
+
+<details>
+<summary>op7418/guizang-social-card-skill（1 个）</summary>
+
+- [guizang-social-card-skill](guizang-social-card-skill/AGENTS.md)
+
+</details>
+
+<details>
+<summary>phuryn/pm-skills（1 个）</summary>
+
+- [brainstorm-okrs](brainstorm-okrs/AGENTS.md)
+
+</details>
+
+<details>
+<summary>remotion-dev/skills（1 个）</summary>
+
+- [remotion-best-practices](remotion-best-practices/AGENTS.md)
+
+</details>
+
+<details>
+<summary>Ruphiller/whistle-config（1 个）</summary>
+
+- [whistle-config](whistle-config/AGENTS.md)
+
+</details>
+
+<details>
+<summary>slidevjs/slidev（1 个）</summary>
+
+- [slidev](slidev/AGENTS.md)
+
+</details>
+
+<details>
+<summary>vercel-labs/agent-skills（2 个）</summary>
+
+- [vercel-react-best-practices](vercel-react-best-practices/AGENTS.md)
+- [web-design-guidelines](web-design-guidelines/AGENTS.md)
+
+</details>
+
+<details>
+<summary>vercel-labs/json-render（1 个）</summary>
+
+- [remotion](remotion/AGENTS.md)
+
+</details>
+
+<details>
+<summary>vercel-labs/skills（1 个）</summary>
+
+- [find-skills](find-skills/AGENTS.md)
+
+</details>
+
+<details>
+<summary>volcengine/ark-cli（4 个）</summary>
+
+- [arkcli-agent](arkcli-agent/AGENTS.md)
+- [arkcli-auth](arkcli-auth/AGENTS.md)
+- [arkcli-billing](arkcli-billing/AGENTS.md)
+- [arkcli-pricing](arkcli-pricing/AGENTS.md)
+
+</details>
+
+<details>
+<summary>volcengine/volcengine-skills（15 个）</summary>
+
+- [volcengine-api](volcengine-api/AGENTS.md)
+- [volcengine-cli](volcengine-cli/AGENTS.md)
+- [volcengine-compliance](volcengine-compliance/AGENTS.md)
+- [volcengine-db-supabase](volcengine-db-supabase/AGENTS.md)
+- [volcengine-deploy](volcengine-deploy/AGENTS.md)
+- [volcengine-find-skills](volcengine-find-skills/AGENTS.md)
+- [volcengine-iac](volcengine-iac/AGENTS.md)
+- [volcengine-knowledge-search](volcengine-knowledge-search/AGENTS.md)
+- [volcengine-landing-zone](volcengine-landing-zone/AGENTS.md)
+- [volcengine-prepare](volcengine-prepare/AGENTS.md)
+- [volcengine-sale](volcengine-sale/AGENTS.md)
+- [volcengine-sdk-generator](volcengine-sdk-generator/AGENTS.md)
+- [volcengine-tosutil](volcengine-tosutil/AGENTS.md)
+- [volcengine-troubleshooting](volcengine-troubleshooting/AGENTS.md)
+- [volcengine-vefaas](volcengine-vefaas/AGENTS.md)
+
+</details>
+
+<details>
+<summary>wheresryan22/anatomy（1 个）</summary>
+
+- [anatomy](anatomy/AGENTS.md)
+
+</details>
+
+<details>
+<summary>wshobson/agents（2 个）</summary>
+
+- [data-storytelling](data-storytelling/AGENTS.md)
+- [openapi-spec-generation](openapi-spec-generation/AGENTS.md)
+
+</details>
+
+<details>
+<summary>zarazhangrui/frontend-slides（1 个）</summary>
+
+- [frontend-slides](frontend-slides/AGENTS.md)
+
+</details>
+
+<details>
+<summary>ZzzLc0405/photo-abstract-editorial（1 个）</summary>
+
+- [photo-abstract-editorial](photo-abstract-editorial/AGENTS.md)
+
+</details>
+
+<details>
+<summary>微信开发者工具 App 内置 skill（1 个）</summary>
+
+- [wechatide-skill](wechatide-skill/AGENTS.md)
+
+</details>
+
+## 插件
+
+通过插件分发的技能由各自管理器维护，恢复方式见[插件安装指针](PLUGINS.md)。插件缓存与 system 技能不复制到本仓库。
+
+## 使用与维护
+
+按任务选择技能：自维护目录读取 `SKILL.md`，第三方目录读取 `AGENTS.md`。安装、升级与仓库同步分别执行；同步来源记录会保留本机正在使用的版本和定制。
+
+提交前核对实际目录与索引、相对引用、安装命令语法和敏感信息；脚本变更按影响范围验证。
