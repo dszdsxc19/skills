@@ -40,7 +40,7 @@
 
 每个技能进入对应 `AGENTS.md` 查看安装命令。固定提交用于恢复已核对的版本；更新时先确认来源和本机定制。历史安装记录缺失的部分条目使用经过内容核对的恢复来源，指针中注明依据。
 
-本次索引包含 259 个第三方技能，按来源折叠展示：
+本次索引包含 260 个第三方技能，按来源折叠展示：
 
 <details>
 <summary>@google/stitch（1 个）</summary>
@@ -629,6 +629,13 @@
 <summary>slidevjs/slidev（1 个）</summary>
 
 - [slidev](slidev/AGENTS.md)
+
+</details>
+
+<details>
+<summary>unclebob/ub-mode（1 个）</summary>
+
+- [ub-mode](ub-mode/AGENTS.md)
 
 </details>
 
