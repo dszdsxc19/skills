@@ -33,6 +33,7 @@
 | [skill-manager](skill-manager/SKILL.md) | 为发现、创建、安装、同步和维护 skill 提供统一路由。 |
 | [vscode-worktree-workflow](vscode-worktree-workflow/SKILL.md) | 用 VS Code multi-root workspace 和 Git worktree 组织多仓库、多需求并行开发。 |
 | [writing-editor](writing-editor/SKILL.md) | 作为克制的第一读者 review 草稿，优先帮助作者自己修改。 |
+| [wx-mp-clip](wx-mp-clip/SKILL.md) | 无人值守抓取微信公众号文章（含图片消息轮播）：CDP 驱动 headless Chrome 加真实登录 cookie 过风控，下载原图并经 macOS Vision OCR 还原全文，输出自包含 Markdown。 |
 
 `siddhartha-*` 依赖相应 Obsidian vault 的结构；其他环境依赖以技能入口为准。
 
