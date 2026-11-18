@@ -4,7 +4,7 @@
 
 ```text
 <outDir>/
-├── article.md            # 主交付：来源信息、全文、原图画廊、配文摘要
+├── article.md            # 主交付：来源信息、原图画廊、配文；启用 OCR 时附文字稿
 ├── article_fulltext.md   # --ocr 自动生成的完整文字稿
 ├── ocr_raw.txt           # --ocr 原始文字，按 === IMG_xx.png === 分节
 ├── ocr_layout.json       # --ocr 每页文字、坐标、置信度及识别错误
@@ -15,7 +15,7 @@
     └── cover_share.jpg   # 可选封面；后缀同样按实际字节确定
 ```
 
-未加 `--ocr` 时不生成三个 OCR 专用文件。来源文章 URL 和 CDN URL 仅存元数据；两个 Markdown 的链接全部指向包内文件，移动整个目录后仍可阅读。
+默认不加 `--ocr`，以完整原图、自包含 Markdown 和来源元数据交付；需要文字稿时按用户要求启用。三个 OCR 专用文件仅在启用时生成，少量识别错字或排版偏差不影响原图交付。来源文章 URL 和 CDN URL 仅存元数据；所有生成的 Markdown 链接均指向包内文件，移动整个目录后仍可阅读。
 
 ## 元数据
 
@@ -56,12 +56,14 @@
 
 ## 自动验收与回归
 
-脚本成功前检查：必要文件齐全、图片后缀匹配、正文清单与文件一致、两个 Markdown 没有包外或缺失引用；启用 OCR 时分节数与正文图数一致。通过后写 `status: completed` 和 `verification.json`，返回 0。
+默认验收检查：必要文件齐全、图片后缀匹配、正文清单与文件一致、占位首图被排除、Markdown 没有包外或缺失引用。启用 OCR 时另检查文字稿文件及分节数，识别质量按实际结果说明。通过后写 `status: completed` 和 `verification.json`，返回 0。
 
 ```bash
 node --check scripts/wx_clip.mjs
 node --test scripts/wx_clip.test.mjs
-node scripts/wx_clip.mjs "https://mp.weixin.qq.com/s/<TOKEN>" ./regression --ocr
+node scripts/wx_clip.mjs "https://mp.weixin.qq.com/s/<TOKEN>" ./regression
+# 仅在验证 OCR 模式时附加 --ocr，并使用另一输出目录。
+node scripts/wx_clip.mjs "https://mp.weixin.qq.com/s/<TOKEN>" ./regression_ocr --ocr
 ```
 
 2026-11-18 对「阿东玩AI」benchmark 图片消息的实际来源核验：11 张独立正文卡片，另有 1 个占位首图节点；原始 CDN 响应为 1350×1800 PNG，封面为 1280×1706 JPEG。正文有 7 个章节和开篇导语。旧记录的“7 张 WebP、约 1500 字、4 章”来自不完整抓取，不作为固定验收门槛。时间戳 1794752814 对应 2026-11-15 22:26:54+08:00，卡片印刷日期为 2026-11-14。

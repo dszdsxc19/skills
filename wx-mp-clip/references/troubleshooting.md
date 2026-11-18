@@ -45,7 +45,7 @@
 
 ## 6. 有 ocr_raw.txt，却没有完整文字稿
 
-新版 `--ocr` 一次生成 `ocr_raw.txt`、`ocr_layout.json`、`article_fulltext.md`，并把完整正文纳入 `article.md`。
+默认导出保留原图和配文，OCR 文件不属于默认必需产物。只有启用 `--ocr` 时，才应一次生成 `ocr_raw.txt`、`ocr_layout.json`、`article_fulltext.md`，并把识别文字纳入 `article.md`。本机 Apple Vision 的错字和复杂图解排版偏差按辅助结果说明，主要验收仍以完整原图与自包含为准。
 
 - 所有输入先经 `sips` 转 PNG，避免 Vision 对 WebP 的兼容性差异；一次 `swiftc -O` 编译后批量识别。
 - 空页或出错页只重试一次，重试关闭语言校正。仍有实际识别错误、分节数不一致、或全部正文为空时返回非零；已下载图片和底稿保留。
@@ -63,4 +63,4 @@
 
 ## 9. 回归与完成状态
 
-先运行 `node --test scripts/wx_clip.test.mjs`，再用真实文章在新目录跑 `--ocr`。同时核对退出码、`meta.status`、实际图片清单、OCR 全文和 `verification.json`。失败时已有产物可以保留，但不能标为完成；成功时无需固定为某个图片数量、篇幅或章节数。
+先运行 `node --test scripts/wx_clip.test.mjs`，再用真实文章在新目录跑默认导出。核对退出码、`meta.status`、实际图片清单、占位首图去重和自包含检查；涉及 OCR 时再附加 `--ocr` 核对文字稿。失败时已有产物可以保留，但不能标为完成；成功时无需固定为某个图片数量、篇幅或章节数。
